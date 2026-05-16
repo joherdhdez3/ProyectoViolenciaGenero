@@ -1,37 +1,118 @@
-## Instalacion
-Comenzamos con la instalación de Node.js en su pagina web https://nodejs.org/es/download
-Seleccionaremos el instalador 
-## Getting Started
+# Instalación del proyecto
 
-First, run the development server:
+## Requisitos previos
+
+Instalar:
+
+- Node.js
+- npm
+- Git
+- VS Code (opcional)
+
+---
+
+# Instalación en Ubuntu
+
+## 1. Actualizar paquetes del sistema
+
+```bash
+sudo apt update
+```
+
+---
+
+## 2. Instalar curl y git
+
+```bash
+sudo apt install curl git
+```
+
+`curl` nos servirá para descargar archivos y realizar peticiones HTTP desde terminal.
+
+---
+
+## 3. Instalar NVM (Node Version Manager)
+
+NVM nos permite instalar y administrar múltiples versiones de Node.js.
+
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+```
+
+Cerrar y volver a abrir la terminal.
+
+---
+
+## 4. Instalar Node.js LTS
+
+```bash
+nvm install --lts
+```
+
+---
+
+## 5. Verificar instalación
+
+```bash
+node -v
+npm -v
+```
+
+Versiones ocupadas para este proyecto:
+
+```text
+v24.15.0
+11.12.1
+```
+
+---
+
+## 6. Clonar repositorio
+
+```bash
+git clone https://github.com/joherdhdez3/ProyectoViolenciaGenero.git
+```
+
+---
+
+## 7. Entrar al proyecto desde nuestro vscode
+
+```bash
+cd ProyectoViolenciaGenero/frontend
+```
+
+---
+
+## 8. Instalar dependencias
+
+```bash
+npm install
+```
+
+---
+
+## 9. Ejecutar servidor de desarrollo
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Este comando inicia el servidor de desarrollo de Next.js.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 10. Abrir proyecto en navegador
 
-## Learn More
+```text
+http://localhost:3000
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Notas importantes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Para realizar modificaciones sin detener el servidor, se recomienda abrir otra terminal en VS Code.
+- Next.js actualiza automáticamente los cambios guardados gracias al Hot Reload.
+- En este proyecto no se utilizan entornos virtuales como en Python, ya que Node.js administra dependencias mediante `package.json` y `node_modules`.
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
