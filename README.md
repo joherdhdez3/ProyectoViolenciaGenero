@@ -1,5 +1,6 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
+## Instalacion
+Comenzamos con la instalación de Node.js en su pagina web https://nodejs.org/es/download
+Seleccionaremos el instalador 
 ## Getting Started
 
 First, run the development server:
