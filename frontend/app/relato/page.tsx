@@ -48,7 +48,7 @@ export default function PaginaRelato() {
     <div className="page" style={{ paddingBottom: 100 }}>
       <Breadcrumb items={breadcrumbItems} />
 
-      <h1 className="page-title">Generador de Relato de Hechos (F05 / F06)</h1>
+      <h1 className="page-title">Generador de Relato de Hechos</h1>
       <p className="page-subtitle">
         La IA reorganiza tu relato de forma cronológica y formal bajo estructura
         jurídica para la queja.
@@ -106,7 +106,7 @@ export default function PaginaRelato() {
             id="autoridad"
             type="text"
             className="form-input"
-            placeholder="Ej. Presidente Municipal / Cabildo"
+            placeholder="Ej. Alcalde(sa) / Concejal / Titular de la Dependencia"
             value={form.autoridad}
             onChange={(e) => setField('autoridad', e.target.value)}
           />
@@ -145,7 +145,7 @@ export default function PaginaRelato() {
 
       {/* ── F05: Relato reorganizado por IA ── */}
       <div className="section-label">
-        F05 — Relato reorganizado por IA
+        Relato reorganizado por IA
         <span className="gen-badge">✓ Generado automáticamente</span>
       </div>
       <div className="relato-generado" aria-label="Relato generado">
@@ -181,7 +181,7 @@ export default function PaginaRelato() {
 
       {/* ── F06: Relato final estructurado ── */}
       <div className="section-label" style={{ color: 'var(--morado)' }}>
-        F06 — Relato de hechos estructurado{' '}
+        Relato de hechos estructurado{' '}
         <span style={{ fontSize: 11, fontWeight: 400, color: 'var(--gris)', textTransform: 'none', letterSpacing: 0 }}>
           (versión final para queja)
         </span>
