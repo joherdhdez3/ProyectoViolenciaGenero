@@ -63,24 +63,24 @@ export default function PaginaDiagnostico() {
       <div className="diag-layout">
         {/* ── Columna principal ── */}
         <div>
-          <div className="section-label">Tu relato (F01)</div>
+          <div className="section-label">Tu relato</div>
           <blockquote className="relato-box">
             &ldquo;{relato || 'Cuéntame lo que pasó… — texto ingresado por la usuaria.'}&rdquo;
           </blockquote>
 
-          <div className="section-label">Conductas identificadas (F02)</div>
+          <div className="section-label">Conductas identificadas</div>
           <ul className="conductas-grid" aria-label="Conductas identificadas">
             {CONDUCTAS.map((c) => (
               <li key={c} className="conducta-chip">{c}</li>
             ))}
           </ul>
 
-          <div className="section-label">Derechos vulnerados (F07)</div>
+          <div className="section-label">Derechos vulnerados</div>
           <ul className="derechos-list">
             {DERECHOS.map((d) => <li key={d}>{d}</li>)}
           </ul>
 
-          <div className="section-label">Instituciones competentes (F03)</div>
+          <div className="section-label">Instituciones competentes</div>
           {INSTITUCIONES_DIAGNOSTICO.map((inst) => (
             <div className="inst-item" key={inst.nombre}>
               <div>
