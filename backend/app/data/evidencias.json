@@ -1,0 +1,23 @@
+[
+  {
+    "titulo": "Pruebas Digitales",
+    "items": [
+      "Capturas de pantalla completas: Mensajes, correos o publicaciones en redes sociales donde conste la agresión. Ejemplo: Captura completa sin recortar donde se observe la fecha, hora y URL o perfil.",
+      "Grabaciones de Audio o Video: Archivos multimedia de sesiones, reuniones o llamadas. Ejemplo: Grabación de la sesión de cabildo o chat de voz en formato MP4 o MP3 sin ediciones.",
+      "Correos electrónicos con encabezados técnicos: Mensajes enviados a tu correo institucional donde se te condicione el sueldo, se te violente o se te nieguen recursos indispensables para trabajar.",
+      "Mensajes de texto y chats exportados: Historiales de conversación de WhatsApp o Telegram donde se demuestre acoso, amenazas o instrucciones para excluirte de tus funciones de manera injustificada."
+      
+    ]
+  },
+  {
+    "titulo": "Pruebas Documentales",
+    "items": [
+      "Oficios oficiales con acuse: Documentos dirigidos a la autoridad que demuestren que se solicitó información o recursos y fueron negados. Ejemplo: Oficio firmado con sello de recibido por Oficialía.",
+      "Convocatorias o Minutas de Trabajo: Documentos oficiales que demuestren exclusión o alteración de tus facultades. Ejemplo: Minuta donde conste que no se permitió el uso de la palabra.",
+      "Copia de la nómina o recibos de pago: Documento que demuestra que se te redujo, retuvo o suspendió el sueldo o las dietas del cargo de manera injustificada.",
+      "Nombramiento oficial o Constancia de Mayoría: Documento emitido por la autoridad electoral que acredita que eres servidora pública electa y estás en funciones.",
+      "Convocatorias escritas a sesiones: Documentos o correos que demuestren que se te convocó tarde, fuera de tiempo o que de plano no se te envió la información para sesionar."
+
+    ]
+  }
+]

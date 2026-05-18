@@ -1,0 +1,237 @@
+{
+  "Álvaro Obregón": {
+    "alcaldia": "Álvaro Obregón",
+    "oficinas": [
+      {
+        "nombre": "Dirección Distrital IECM",
+        "area": "Atención Ciudadana y Quejas",
+        "ambito": "Local",
+        "tipo": "Autoridad Electoral",
+        "tel": "55-5483-3800, ext. 7028 y 7128",
+        "email": "distrito18@iecm.mx",
+        "desc": "Dirección: Benvenuto Cellini, número 105, colonia Alfonso XIII. Horario: De lunes a viernes de 9:00 a 17:00 horas."
+      }
+      
+    ]
+  },
+  "Gustavo A. Madero": {
+    "alcaldia": "Gustavo A. Madero",
+    "oficinas": [
+      {
+        "nombre": "Dirección Distrital IECM",
+        "area": "Atención Ciudadana y Quejas",
+        "ambito": "Local",
+        "tipo": "Autoridad Electoral",
+        "tel": "55-5483-3800, ext. 7001 y 7101",
+        "email": "distrito1@iecm.mx",
+        "desc": "Dirección: Guadalupe Victoria número 258, Col. Cuautepec de Madero, Gustavo A. Madero, C.P. 07200. Horario: De lunes a viernes de 9:00 a 17:00 horas."
+      }
+    ]
+  },
+  "Iztapalapa": {
+    "alcaldia": "Iztapalapa",
+    "oficinas": [
+      {
+        "nombre": "Dirección Distrital IECM (Sede Distrital Iztapalapa)",
+        "area": "Atención Ciudadana y Quejas",
+        "ambito": "Local",
+        "tipo": "Autoridad Electoral",
+        "tel": "55-5483 3800, ext. 7028 y 7128",
+        "email": "distrito28@iecm.mx",
+        "desc": "Dirección: Avenida Paseo de las Galias número 35, Col. Lomas Estrella 2da Sección, Iztapalapa, C.P. 09890. Horario: De lunes a viernes de 9:00 a 17:00 horas."
+      }
+    ]
+  },
+  "Tlalpan": {
+    "alcaldia": "Tlalpan",
+    "oficinas": [
+      {
+        "nombre": "Oficinas Centrales del Instituto Electoral de la CDMX",
+        "area": "Oficialía de Partes",
+        "ambito": "Local",
+        "tipo": "Autoridad Electoral (Sede Central)",
+        "tel": "55-5483-3800",
+        "email": "distrito14@iecm.mx",
+        "desc": "Dirección: Huizaches 25, Colonia Rancho Los Colorines, Tlalpan, CP 14386, Ciudad de México. Horario: De lunes a viernes de 9:00 a 17:00 horas."
+      }
+    ]
+  },
+  "Azcapotzalco": {
+    "alcaldia": "Azcapotzalco",
+    "oficinas": [
+      {
+        "nombre": "Instituto Electoral de la CDMX",
+        "area": "Atención Ciudadana",
+        "ambito": "Local",
+        "tipo": "Autoridad Electoral",
+        "tel": "(55) 5483 3800, ext. 7003 y 7103",
+        "email": "distrito3@iecm.mx",
+        "desc": "Dirección: Avenida 22 de Febrero número 251, Col. Santa María Malinalco, Azcapotzalco, C.P. 02050. Horario: De lunes a viernes de 9:00 a 17:00 horas."
+      }
+    ]
+  },
+  "Tláhuac": {
+    "alcaldia": "Tláhuac",
+    "oficinas": [
+      {
+        "nombre": "Instituto Electoral de la CDMX",
+        "area": "Atención Ciudadana",
+        "ambito": "Local",
+        "tipo": "Autoridad Electoral",
+        "tel": "55-5483-3800, ext. 7008 y 7108",
+        "email": "distrito8@iecm.mx",
+        "desc": "Dirección: General Manuel M. Flores número 35, Col. Barrio de Santa Ana Zapotitlán. Horario: De lunes a viernes de 9:00 a 17:00 horas."
+      }
+    ]
+  },
+  "Cuauhtémoc": {
+    "alcaldia": "Cuauhtémoc",
+    "oficinas": [
+      {
+        "nombre": "Instituto Electoral de la CDMX",
+        "area": "Atención Ciudadana",
+        "ambito": "Local",
+        "tipo": "Autoridad Electoral",
+        "tel": "55-5483-3800, ext. 7009 y 7109",
+        "email": "distrito9@iecm.mx",
+        "desc": "Dirección: Maple número 80, Col. Santa María Insurgentes. Horario: De lunes a viernes de 9:00 a 17:00 horas."
+      }
+      ,
+      {
+        "nombre": "Fiscalía de Delitos Electorales de la CDMX (Agencia Local)",
+        "area": "Unidad de Recepción de Denuncias",
+        "ambito": "Local / Penal",
+        "tipo": "Fiscalía / Procuración de Justicia",
+        "tel": "55-5345-5370 ext. 5370, 11096",
+        "email": "daniel_osorio@fgjcdmx.gob.mx",
+        "desc": "Dirección: Calle República de Brasil C. P. 06010 #74 Colonia Centro (Área 1), Código postal 06000"
+      }
+    ]
+  },
+  "Venustiano Carranza": {
+    "alcaldia": "Venustiano Carranza",
+    "oficinas": [
+      {
+        "nombre": "Instituto Electoral de la CDMX",
+        "area": "Atención Ciudadana",
+        "ambito": "Local",
+        "tipo": "Autoridad Electoral",
+        "tel": "55-5483-3800, extensión 7010 y 7110",
+        "email": "distrito10@iecm.mx",
+        "desc": "Dirección: Manuel Rivera Cambas número 61, colonia Jardín Balbuena. Horario: De lunes a viernes de 9:00 a 17:00 horas."
+      }
+    ]
+  },
+  "Iztacalco": {
+    "alcaldia": "Iztacalco",
+    "oficinas": [
+      {
+        "nombre": "Instituto Electoral de la CDMX",
+        "area": "Atención Ciudadana",
+        "ambito": "Local",
+        "tipo": "Autoridad Electoral",
+        "tel": "55-5483-3800, ext. 7011 y 7111",
+        "email": "distrito11o@iecm.mx",
+        "desc": "Dirección: Oriente 243-B número 101, Col. Agrícola Oriental. Horario: De lunes a viernes de 9:00 a 17:00 horas."
+      }
+    ]
+  },
+  "Miguel Hidalgo": {
+    "alcaldia": "Miguel Hidalgo",
+    "oficinas": [
+      {
+        "nombre": "Instituto Electoral de la CDMX",
+        "area": "Atención Ciudadana",
+        "ambito": "Local",
+        "tipo": "Autoridad Electoral",
+        "tel": "55-5483-3800, ext. 7013 y 7113",
+        "email": "distrito13@iecm.mx",
+        "desc": "Dirección: Constitución número 35, Col. Escandón. Horario: De lunes a viernes de 9:00 a 17:00 horas."
+      }
+    ]
+  },
+  "Benito Juárez": {
+    "alcaldia": "Benito Juárez",
+    "oficinas": [
+      {
+        "nombre": "Instituto Electoral de la CDMX",
+        "area": "Atención Ciudadana",
+        "ambito": "Local",
+        "tipo": "Autoridad Electoral",
+        "tel": "55-5483-3800, ext. 7017 y 7117",
+        "email": "distrito17@iecm.mx",
+        "desc": "Dirección: Xochicalco número 465, Col. Vértiz Narvarte. Horario: De lunes a viernes de 9:00 a 17:00 horas."
+      }
+    ]
+  },
+  "Xochimilco": {
+    "alcaldia": "Xochimilco",
+    "oficinas": [
+      {
+        "nombre": "Instituto Electoral de la CDMX",
+        "area": "Atención Ciudadana",
+        "ambito": "Local",
+        "tipo": "Autoridad Electoral",
+        "tel": "55-5483-3800, ext. 7019 y 7119",
+        "email": "distrito19@iecm.mx",
+        "desc": "Dirección: Avenida México, número 5601, Col. Huichapan. Horario: De lunes a viernes de 9:00 a 17:00 horas."
+      }
+    ]
+  },
+  "Cuajimalpa de Morelos": {
+    "alcaldia": "Cuajimalpa de Morelos",
+    "oficinas": [
+      {
+        "nombre": "Instituto Electoral de la CDMX",
+        "area": "Atención Ciudadana",
+        "ambito": "Local",
+        "tipo": "Autoridad Electoral",
+        "tel": "55-5483-3800, ext. 7020 y 7120",
+        "email": "distrito20@iecm.mx",
+        "desc": "Dirección: Arteaga y Salazar número 453, Col. Contadero. Horario: De lunes a viernes de 9:00 a 17:00 horas."
+      }
+    ]
+  },
+  "Coyoacán": {
+    "alcaldia": "Coyoacán",
+    "oficinas": [
+      {
+        "nombre": "Instituto Electoral de la CDMX",
+        "area": "Atención Ciudadana",
+        "ambito": "Local",
+        "tipo": "Autoridad Electoral",
+        "tel": "55-5483-3800, ext. 7026 y 7126",
+        "email": "distrito26@iecm.mx",
+        "desc": "Dirección: Holanda 21, Col. San Diego Churubusco. Horario: De lunes a viernes de 9:00 a 17:00 horas."
+      }
+    ]
+  },
+  "La Magdalena Contreras": {
+    "alcaldia": "La Magdalena Contreras",
+    "oficinas": [
+      {
+        "nombre": "Instituto Electoral de la CDMX",
+        "area": "Atención Ciudadana",
+        "ambito": "Local",
+        "tipo": "Autoridad Electoral",
+        "tel": "55-5483-3800, ext. 7033 y 7133",
+        "email": "distrito33@iecm.mx",
+        "desc": "Dirección: Santiago número 493, Col. Lomas Quebradas. Horario: De lunes a viernes de 9:00 a 17:00 horas."
+      }
+    ]
+  },
+  "Milpa Alta": {
+    "alcaldia": "Milpa Alta",
+    "oficinas": [
+      {
+        "nombre": "Dirección Distrital IECM Milpa Alta",
+        "area": "Atención Ciudadana y Quejas",
+        "ambito": "Local",
+        "tipo": "Autoridad Electoral",
+        "tel": "55-5483-3800, ext. 7007 y 7107",
+        "email": "distrito7@iecm.mx",
+        "desc": "Dirección: Cuauhtémoc Norte número 84, Pueblo San Pedro Atocpan, Milpa Alta, C.P. 12200. Horario: De lunes a viernes de 9:00 a 17:00 horas."
+      }
+    ]
+  }
+}
