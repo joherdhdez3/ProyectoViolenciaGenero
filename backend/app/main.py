@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.routers import chat
+from app.routers import chat, evidencia
 app = FastAPI(
     title = "Esperanza API",
     version = "1.0.0"
@@ -15,9 +15,12 @@ app.add_middleware(
 )
 
 app.include_router(chat.router)
+app.include_router(evidencia.router)
 
 @app.get("/")
 def root():
     return{
         "message": "Back funcionando"
     }
+
+
