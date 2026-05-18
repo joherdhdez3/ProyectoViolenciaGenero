@@ -1,47 +1,78 @@
-from reportlab.platypus import SimpleDocTemplate
-from reportlab.platypus import Paragraph
-from reportlab.platypus import Spacer
-
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer
 from reportlab.lib.styles import getSampleStyleSheet
 
-def generate_pdf(user_message: str, ai_response: dict):
-    pdf_path = "reporte.pdf"
-    doc = SimpleDocTemplate(pdf_path)
+def generate_pdf(
+    user_message: str,
+    ai_response: dict,
+    relato_formal: dict = None,
+    datos_quejosa: dict = None,
+    pdf_path: str = "reporte.pdf",
+):
+    doc    = SimpleDocTemplate(pdf_path)
     styles = getSampleStyleSheet()
-    elements = []
+    elems  = []
 
-    elements.append(Paragraph("Reporte de Orientación", styles["Title"]))
-    elements.append(Spacer(1, 20))
-    elements.append(Paragraph(f"<b>Mensaje:</b> {user_message}", styles["BodyText"]))
-    elements.append(Spacer(1, 12))
+    elems.append(Paragraph("Reporte de Orientación VPMRG", styles["Title"]))
+    elems.append(Spacer(1, 16))
+
+    elems.append(Paragraph("<b>Relato de la usuaria:</b>", styles["BodyText"]))
+    elems.append(Paragraph(user_message, styles["BodyText"]))
+    elems.append(Spacer(1, 12))
 
     nivel = ai_response.get("nivel_vpmrg", "no identificado")
-    elements.append(Paragraph(f"<b>Nivel de riesgo:</b> {nivel}", styles["BodyText"]))
-    elements.append(Spacer(1, 12))
+    elems.append(Paragraph(f"<b>Nivel de riesgo VPMRG:</b> {nivel.upper()}", styles["BodyText"]))
+    elems.append(Spacer(1, 10))
 
     conductas = ai_response.get("conductas", [])
     if conductas:
-        elements.append(Paragraph("<b>Conductas identificadas:</b>", styles["BodyText"]))
+        elems.append(Paragraph("<b>Conductas identificadas:</b>", styles["BodyText"]))
         for c in conductas:
-            elements.append(Paragraph(f"• {c}", styles["BodyText"]))
-    elements.append(Spacer(1, 12))
+            elems.append(Paragraph(f"• {c}", styles["BodyText"]))
+    elems.append(Spacer(1, 10))
 
     derechos = ai_response.get("derechos_vulnerados", [])
     if derechos:
-        elements.append(Paragraph("<b>Derechos vulnerados:</b>", styles["BodyText"]))
+        elems.append(Paragraph("<b>Derechos vulnerados:</b>", styles["BodyText"]))
         for d in derechos:
-            elements.append(Paragraph(f"• {d}", styles["BodyText"]))
-    elements.append(Spacer(1, 12))
+            elems.append(Paragraph(f"• {d}", styles["BodyText"]))
+    elems.append(Spacer(1, 10))
 
     resumen = ai_response.get("resumen_orientacion", "")
     if resumen:
-        elements.append(Paragraph(f"<b>Orientación:</b> {resumen}", styles["BodyText"]))
-    elements.append(Spacer(1, 20))
+        elems.append(Paragraph(f"<b>Orientación inicial:</b> {resumen}", styles["BodyText"]))
+    elems.append(Spacer(1, 20))
 
-    elements.append(Paragraph(
-        "<b>Recursos CDMX:</b><br/>Línea Mujeres: 56581111<br/>Emergencias: 911",
-        styles["BodyText"]
+    if relato_formal and datos_quejosa:
+        elems.append(Paragraph("─" * 60, styles["BodyText"]))
+        elems.append(Spacer(1, 10))
+        elems.append(Paragraph("QUEJA FORMAL ESTRUCTURADA", styles["Heading2"]))
+        elems.append(Spacer(1, 10))
+
+        proemio = relato_formal.get("proemio", "")
+        if proemio:
+            elems.append(Paragraph("<b>Proemio:</b>", styles["BodyText"]))
+            elems.append(Paragraph(proemio, styles["BodyText"]))
+            elems.append(Spacer(1, 10))
+
+        antecedentes = relato_formal.get("antecedentes", "")
+        if antecedentes:
+            elems.append(Paragraph("<b>Antecedentes:</b>", styles["BodyText"]))
+            elems.append(Paragraph(antecedentes, styles["BodyText"]))
+            elems.append(Spacer(1, 10))
+
+        hechos = relato_formal.get("hechos_ordenados", "")
+        if hechos:
+            elems.append(Paragraph("<b>Hechos:</b>", styles["BodyText"]))
+            elems.append(Paragraph(hechos, styles["BodyText"]))
+            elems.append(Spacer(1, 20))
+
+    elems.append(Paragraph(
+        "<b>Recursos de apoyo CDMX:</b><br/>"
+        "Línea Mujeres: 56581111<br/>"
+        "IECM: 55-5133-1111<br/>"
+        "Emergencias: 911",
+        styles["BodyText"],
     ))
 
-    doc.build(elements)
+    doc.build(elems)
     return pdf_path

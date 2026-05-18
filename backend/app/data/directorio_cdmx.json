@@ -1,0 +1,142 @@
+{
+  "Iztapalapa": [
+    {
+      "institucion": "Dirección Distrital IECM - Distrito XXIV",
+      "direccion": "Av. San Lorenzo Tezonco 140, Iztapalapa, CDMX",
+      "telefono": "55-5133-1111",
+      "horario": "09:00 a 16:00, Lunes a Viernes"
+    },
+    {
+      "institucion": "Fiscalía Especializada VPMRG - CDMX",
+      "direccion": "Av. Rojo Gómez 130, Iztapalapa, CDMX",
+      "telefono": "800-711-8144",
+      "horario": "09:00 a 18:00, Lunes a Viernes"
+    }
+  ],
+  "Álvaro Obregón": [
+    {
+      "institucion": "Dirección Distrital IECM - Distrito X",
+      "direccion": "Av. Revolución 1546, Álvaro Obregón, CDMX",
+      "telefono": "55-5133-1111",
+      "horario": "09:00 a 16:00, Lunes a Viernes"
+    }
+  ],
+  "Benito Juárez": [
+    {
+      "institucion": "Dirección Distrital IECM - Distrito XIV",
+      "direccion": "Insurgentes Sur 800, Benito Juárez, CDMX",
+      "telefono": "55-5133-1111",
+      "horario": "09:00 a 16:00, Lunes a Viernes"
+    }
+  ],
+  "Coyoacán": [
+    {
+      "institucion": "Dirección Distrital IECM - Distrito XX",
+      "direccion": "Av. Universidad 1900, Coyoacán, CDMX",
+      "telefono": "55-5133-1111",
+      "horario": "09:00 a 16:00, Lunes a Viernes"
+    }
+  ],
+  "Cuauhtémoc": [
+    {
+      "institucion": "Sede Central IECM",
+      "direccion": "Huizaches 25, Rancho Los Colorines, CDMX",
+      "telefono": "55-5133-1111",
+      "horario": "09:00 a 18:00, Lunes a Viernes"
+    },
+    {
+      "institucion": "Tribunal Electoral de la CDMX (TECDMX)",
+      "direccion": "Av. Juárez 8, Centro Histórico, CDMX",
+      "telefono": "55-5512-2323",
+      "horario": "09:00 a 15:00, Lunes a Viernes"
+    }
+  ],
+  "Gustavo A. Madero": [
+    {
+      "institucion": "Dirección Distrital IECM - Distrito V",
+      "direccion": "Av. Insurgentes Norte 1587, GAM, CDMX",
+      "telefono": "55-5133-1111",
+      "horario": "09:00 a 16:00, Lunes a Viernes"
+    }
+  ],
+  "Miguel Hidalgo": [
+    {
+      "institucion": "Dirección Distrital IECM - Distrito XV",
+      "direccion": "Lago Zurich 245, Miguel Hidalgo, CDMX",
+      "telefono": "55-5133-1111",
+      "horario": "09:00 a 16:00, Lunes a Viernes"
+    }
+  ],
+  "Tlalpan": [
+    {
+      "institucion": "Dirección Distrital IECM - Distrito XXVI",
+      "direccion": "Periférico Sur 5000, Tlalpan, CDMX",
+      "telefono": "55-5133-1111",
+      "horario": "09:00 a 16:00, Lunes a Viernes"
+    }
+  ],
+  "Xochimilco": [
+    {
+      "institucion": "Dirección Distrital IECM - Distrito XXVII",
+      "direccion": "Av. Morelos 6, Xochimilco, CDMX",
+      "telefono": "55-5133-1111",
+      "horario": "09:00 a 16:00, Lunes a Viernes"
+    }
+  ],
+  "Azcapotzalco": [
+    {
+      "institucion": "Dirección Distrital IECM - Distrito II",
+      "direccion": "Av. Azcapotzalco 321, CDMX",
+      "telefono": "55-5133-1111",
+      "horario": "09:00 a 16:00, Lunes a Viernes"
+    }
+  ],
+  "Cuajimalpa": [
+    {
+      "institucion": "Módulo IECM Cuajimalpa",
+      "direccion": "Av. Juárez 44, Cuajimalpa, CDMX",
+      "telefono": "55-5133-1111",
+      "horario": "09:00 a 16:00, Lunes a Viernes"
+    }
+  ],
+  "Iztacalco": [
+    {
+      "institucion": "Dirección Distrital IECM - Distrito XXI",
+      "direccion": "Av. Río Churubusco 50, Iztacalco, CDMX",
+      "telefono": "55-5133-1111",
+      "horario": "09:00 a 16:00, Lunes a Viernes"
+    }
+  ],
+  "Magdalena Contreras": [
+    {
+      "institucion": "Módulo IECM Magdalena Contreras",
+      "direccion": "Prolongación Insurgentes Sur 3500, CDMX",
+      "telefono": "55-5133-1111",
+      "horario": "09:00 a 16:00, Lunes a Viernes"
+    }
+  ],
+  "Milpa Alta": [
+    {
+      "institucion": "Módulo IECM Milpa Alta",
+      "direccion": "Av. Constitución 10, San Pablo Oztotepec, CDMX",
+      "telefono": "55-5133-1111",
+      "horario": "09:00 a 15:00, Lunes a Viernes"
+    }
+  ],
+  "Tláhuac": [
+    {
+      "institucion": "Módulo IECM Tláhuac",
+      "direccion": "Av. Tláhuac 5600, CDMX",
+      "telefono": "55-5133-1111",
+      "horario": "09:00 a 16:00, Lunes a Viernes"
+    }
+  ],
+  "Venustiano Carranza": [
+    {
+      "institucion": "Dirección Distrital IECM - Distrito XXIII",
+      "direccion": "Av. Fray Servando Teresa de Mier 200, CDMX",
+      "telefono": "55-5133-1111",
+      "horario": "09:00 a 16:00, Lunes a Viernes"
+    }
+  ]
+}
