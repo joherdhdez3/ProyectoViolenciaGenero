@@ -11,6 +11,7 @@ import { useRelato } from '@/context/RelatoContext'
 import { Breadcrumb, AvisoLegal } from '@/components/ui/Breadcrumb'
 import { ALCALDIAS_CDMX, CARGOS_POLITICOS } from '@/lib/constants'
 import type { FormRelato } from '@/types'
+import { enviarRelatoFormal } from '@/lib/api'
 
 // Fecha máxima: hoy (no se pueden registrar hechos futuros)
 const HOY = new Date().toISOString().split('T')[0]
@@ -31,8 +32,13 @@ const breadcrumbItems = [
 ]
 
 export default function PaginaRelato() {
-  const { relato }            = useRelato()
-  const [form, setForm]       = useState<FormRelato>(FORM_INICIAL)
+  const { relato, casoId } = useRelato()
+  const [form, setForm] = useState<FormRelato>(FORM_INICIAL)
+
+  const [cargando, setCargando] = useState(false)
+  const [datosIa, setDatosIa] = useState<any>(null)
+  const [pdfUrl, setPdfUrl] = useState<string>('')
+  
 
   const setField = <K extends keyof FormRelato>(key: K, value: string) =>
     setForm((prev) => ({ ...prev, [key]: value }))
@@ -43,7 +49,41 @@ export default function PaginaRelato() {
       : form.fechaInicio
       ? `${form.fechaInicio} en adelante`
       : 'fecha de los hechos'
+  
+  const procesarRelatoFormal = async () => {
+    if (!casoId) {
+      alert("No se encontró un folio de caso activo. Por favor regresa al inicio.");
+      return;
+    }
 
+    setCargando(true)
+    try {
+      // Traducción FormRelato al formato 'DatosQuejosa' que pide el backend
+      const datosQuejosaFormateados = {
+        nombre_completo: "Suscrita afectada", // Manteniendo el anonimato
+        cargo_funcion: form.cargo,
+        municipio_alcaldia: form.alcaldia,
+        autoridad_denunciada: form.autoridad || "No especificada"
+      }
+
+      // Envío del paquete oficial unificado a la API
+      const respuesta = await enviarRelatoFormal({
+        caso_id: casoId,
+        datos_quejosa: datosQuejosaFormateados
+      })
+
+      // Resguardo de los textos y la URL del PDF que nos devuelve FastAPI
+      setDatosIa(respuesta)
+      setPdfUrl(respuesta.url_pdf) 
+      
+      alert("¡Relato estructurado por IA con éxito!")
+    } catch (error) {
+      console.error("Error al generar el relato formal:", error)
+      alert("Hubo un error al conectar con el servidor.")
+    } finally {
+      setCargando(false)
+    }
+  }
   return (
     <div className="page" style={{ paddingBottom: 100 }}>
       <Breadcrumb items={breadcrumbItems} />
@@ -149,15 +189,29 @@ export default function PaginaRelato() {
         <span className="gen-badge">✓ Generado automáticamente</span>
       </div>
       <div className="relato-generado" aria-label="Relato generado">
-        <div className="rb-sec">I. ANTECEDENTES</div>
-        Con fecha{' '}
-        <span className="relato-a">{form.fechaInicio || 'fecha de inicio'}</span>, la
-        suscrita se desempeñaba como{' '}
-        <span className="relato-a">{form.cargo || 'cargo'}</span> en la{' '}
-        <span className="relato-a">
-          {form.alcaldia ? `Alcaldía ${form.alcaldia}, Ciudad de México` : 'alcaldía / institución'}
-        </span>.
+        {datosIa ? (
+          // Solo si la IA ya ha respondido
+          <>
+            <div className="rb-sec">I. PROEMIO</div>
+            <p className="texto-ia">{datosIa.proemio}</p>
 
+            <div className="rb-sec">II. ANTECEDENTES</div>
+            <p className="texto-ia">{datosIa.antecedentes}</p>
+
+            <div className="rb-sec">III. HECHOS ORDENADOS</div>
+            <p className="texto-ia">{datosIa.hechos_ordenados}</p>
+          </>
+        ) : (
+          <>
+            <div className="rb-sec">I. ANTECEDENTES</div>
+            Con fecha{' '}
+            <span className="relato-a">{form.fechaInicio || 'fecha de inicio'}</span>, la
+            suscrita se desempeñaba como{' '}
+            <span className="relato-a">{form.cargo || 'cargo'}</span> en la{' '}
+            <span className="relato-a">
+              {form.alcaldia ? `Alcaldía ${form.alcaldia}, Ciudad de México` : 'alcaldía / institución'}
+            </span>.
+          
         <div className="rb-sec">II. HECHOS</div>
         1. Con fecha{' '}
         <span className="relato-a">{form.fechaInicio || 'fecha de inicio'}</span>,{' '}
@@ -177,7 +231,9 @@ export default function PaginaRelato() {
 
         <div className="rb-sec">IV. PRUEBAS OFRECIDAS</div>
         <span className="relato-a">Generado desde Checklist de Evidencia</span>
-      </div>
+      </>
+    )}      
+  </div>
 
       {/* ── F06: Relato final estructurado ── */}
       <div className="section-label" style={{ color: 'var(--morado)' }}>
@@ -202,8 +258,27 @@ export default function PaginaRelato() {
           ← Volver
         </Link>
         <div className="bottom-bar-btns">
-          <button className="btn-outline">✏️ Editar texto</button>
-          <button className="btn-outline">⬇ Descargar PDF</button>
+          <button 
+            className="btn-primary-sm" 
+            onClick={procesarRelatoFormal}
+            disabled={cargando}
+          >
+            {cargando ? 'Procesando...' : 'Estructurar con IA'}
+          </button>
+
+          {/* Botón de descarga: se activa solo cuando tenemos la urlPdf */}
+          <button 
+            className="btn-outline"
+            onClick={() => {
+            if (pdfUrl) {
+              window.open(pdfUrl, '_blank') // 📄 Abre el PDF en una pestaña nueva para imprimir/descargar
+            } else {
+              alert("Primero debes hacer clic en 'Estructurar con IA' para generar el documento.")
+            }
+          }}
+        >
+    Descargar PDF
+  </button>
           <Link href="/directorio" className="btn-primary-sm">
             Finalizar queja →
           </Link>

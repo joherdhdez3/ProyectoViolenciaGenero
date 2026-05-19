@@ -15,6 +15,7 @@ import {
   DERECHOS,
   INSTITUCIONES_DIAGNOSTICO,
 } from '@/lib/constants'
+import { enviarRelato } from '@/lib/api'
 
 const ACCIONES_SIDEBAR = [
   { label: '→ Ver mi ruta de denuncia',     href: '/ruta'       },
@@ -24,15 +25,46 @@ const ACCIONES_SIDEBAR = [
 ]
 
 export default function PaginaDiagnostico() {
-  const { relato }      = useRelato()
+  const { relato, casoId, setCasoId } = useRelato()
   const [listo, setListo] = useState(false)
+  const [respuesta, setRespuesta] = useState('')
+  const [nivelRiesgo, setNivelRiesgo] = useState('')
 
   // useEffect para simular latencia de la API de IA.
   // El array vacío garantiza que corre solo al montar el componente.
   useEffect(() => {
-    const timer = setTimeout(() => setListo(true), 1600)
-    return () => clearTimeout(timer)
-  }, [])
+    // Función interna asíncrona
+  const realizarDiagnostico = async () => {
+    try {
+      // Se llama a la API pasando el relato
+      const data = await enviarRelato({ relato_usuario:relato })
+      // Si hay respuesta del backend
+      if (data.caso_id) {
+        setCasoId(data.caso_id);
+      }
+
+      if (data.resumen_orientacion) {
+        setRespuesta(data.resumen_orientacion);
+      }
+
+      if (data.nivel_vpmrg) {
+        setNivelRiesgo(data.nivel_vpmrg);
+      }
+      setListo(true);
+    } catch (error) {
+      console.error("Error al conectar con el backend:", error)
+      setListo(true);
+    }
+  };
+
+  // Si hay relato, se ejecuta la función
+  if (relato) {
+    realizarDiagnostico();
+  } else {
+    setListo(true);
+  }
+}, [relato, setCasoId])
+   
 
   const breadcrumbItems = [
     { label: 'Inicio',       href: '/'     },
@@ -75,6 +107,23 @@ export default function PaginaDiagnostico() {
             ))}
           </ul>
 
+          {nivelRiesgo && (
+            <div className="alerta-riesgo" style={{
+              padding: '15px',
+              borderRadius: '8px',
+              backgroundColor: 'var(--rojo-claro, #fdf2f2)',
+              borderLeft: '5px solid var(--rojo, #de350b)',
+              marginBottom: '20px'
+            }}>
+            <strong>Nivel de riesgo identificado:</strong> {nivelRiesgo}
+          </div>
+        )}
+
+          <div className="section-label">Análisis de la IA</div>
+          <div className="respuesta-box">
+            {respuesta || "No se recibió respuesta del análisis."}
+          </div>
+
           <div className="section-label">Derechos vulnerados</div>
           <ul className="derechos-list">
             {DERECHOS.map((d) => <li key={d}>{d}</li>)}
@@ -108,7 +157,7 @@ export default function PaginaDiagnostico() {
               ))}
             </nav>
             <div className="aviso-small">
-              <span aria-hidden="true">⚠️</span>
+              <span aria-hidden="true"></span>
               <span>Esta orientación es inicial y no sustituye la asesoría jurídica.</span>
             </div>
           </div>

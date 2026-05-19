@@ -11,15 +11,18 @@ import { createContext, useContext, useState, ReactNode } from 'react'
 interface RelatoContextType {
   relato: string
   setRelato: (texto: string) => void
+  casoId: string
+  setCasoId: (id: string) => void
 }
 
 const RelatoContext = createContext<RelatoContextType | null>(null)
 
 export function RelatoProvider({ children }: { children: ReactNode }) {
   const [relato, setRelato] = useState('')
+  const [casoId, setCasoId] = useState('')
 
   return (
-    <RelatoContext.Provider value={{ relato, setRelato }}>
+    <RelatoContext.Provider value={{ relato, setRelato, casoId, setCasoId }}>
       {children}
     </RelatoContext.Provider>
   )

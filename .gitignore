@@ -1,4 +1,21 @@
+# Entornos virtuales de Python
+backend/entorno_hackaton/
+.venv/
+venv/
+ENV/
+__pycache__/
+*.pyc
+
+# Dependencias de Node / Frontend
 frontend/node_modules/
+frontend/.next/
+frontend/out/
+
+# Archivos de configuración local y secretos
+.env
+.env.local
+.env.*.local
+.DS_Storefrontend/node_modules/
 frontend/.next/
 
 backend/venv/

@@ -3,12 +3,21 @@
 // app/ruta/page.tsx  →  /ruta
 // Ruta de denuncia cronológica. Cada paso puede marcarse como completado.
 
-import { useState } from 'react'
+import { useState, useEffect} from 'react'
 import Link from 'next/link'
 import { Breadcrumb, AvisoLegal } from '@/components/ui/Breadcrumb'
 import { RUTA_PASOS } from '@/lib/constants'
+import { useRelato } from '@/context/RelatoContext'
+import { obtenerRutaInstitucional } from '@/lib/api'
 
 export default function PaginaRuta() {
+  // Extracción del casoId del estado global
+  const { casoId } = useRelato()
+
+  // Estados locales para controlar la carga y los datos
+  const [cargando, setCargando] = useState(true)
+  const [rutaData, setRutaData] = useState<any>(null)
+
   // Set de índices de pasos completados
   const [completados, setCompletados] = useState<Set<number>>(new Set())
 
@@ -20,11 +29,41 @@ export default function PaginaRuta() {
     })
   }
 
+  useEffect(() => {
+        // Función interna asíncrona
+    const cargarRuta = async () => {
+      try {
+        // Se llama a la API pasando el relato
+        const data = await obtenerRutaInstitucional(casoId);
+        // Si hay respuesta del backend
+        if (data) {
+          setRutaData(data);
+        }
+        setCargando(false)
+      } catch (error) {
+        console.error("Error al conectar con el backend:", error)
+        setCargando(false)
+      }
+    }
+
+    if (casoId) {
+      cargarRuta()
+    } else {
+      setCargando(false)
+    }
+  }, [casoId])
+
+  const pasosAMostrar = rutaData?.pasos || RUTA_PASOS
+
   const breadcrumbItems = [
     { label: 'Inicio',       href: '/'             },
     { label: 'Diagnóstico',  href: '/diagnostico'  },
     { label: 'Ruta institucional'                   },
   ]
+  
+  if (cargando) {
+    return <div className="page"><p>Cargando tu ruta personalizada...</p></div>
+  }
 
   return (
     <div className="page">
@@ -39,15 +78,15 @@ export default function PaginaRuta() {
 
       <div className="ruta-meta">
         <span className="ruta-label">
-          Ruta personalizada — {RUTA_PASOS.length} pasos
+          Ruta personalizada — {pasosAMostrar.length} pasos
         </span>
         <span className="ruta-count">
-          {completados.size} de {RUTA_PASOS.length} completados
+          {completados.size} de {pasosAMostrar.length} completados
         </span>
       </div>
 
       <ol className="ruta-lista" aria-label="Pasos de la ruta de denuncia">
-        {RUTA_PASOS.map((paso, i) => {
+        {pasosAMostrar.map((paso, i) => {
           const esCompletado = completados.has(i)
           return (
             <li className="ruta-step" key={i}>
@@ -65,15 +104,17 @@ export default function PaginaRuta() {
               </button>
               <div>
                 <div className={`step-titulo ${esCompletado ? 'completado' : ''}`}>
-                  {paso.titulo}
+                  {paso.institucion || paso.titulo}
                 </div>
-                <div className="step-desc">{paso.desc}</div>
-                {paso.linkLabel && paso.linkTo && (
-                  <Link href={paso.linkTo} className="step-link">
-                    {paso.linkLabel}
-                  </Link>
-                )}
-              </div>
+                <div className="step-desc">
+                  <strong>Acción:</strong> {paso.accion || paso.desc}
+                </div>
+                {paso.plazo && (
+                  <div className="step-time" style={{ fontSize: '0.85rem', color: 'var(--gris-oscuro)', marginTop: '4px' }}>
+                    <strong>Plazo estimado:</strong> {paso.plazo}
+                  </div>
+                )}  
+              </div>  
             </li>
           )
         })}
