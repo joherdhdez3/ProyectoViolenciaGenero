@@ -2,20 +2,21 @@ import os
 import json
 
 from dotenv import load_dotenv
-from openai import OpenAI
+from groq import Groq
+
 
 from app.prompts.diagnostico_prompt import DIAGNOSTICO_PROMPT
 
 load_dotenv()
 
-client = OpenAI(
-    api_key=os.getenv("OPENAI_API_KEY")
+client = Groq(
+    api_key=os.getenv("GROQ_API_KEY")
 )
 
 def get_chat_response(user_message: str):
 
     response = client.chat.completions.create(
-        model="gpt-4.1-mini",
+        model="llama-3.3-70b-versatile",
 
         messages=[
             {
