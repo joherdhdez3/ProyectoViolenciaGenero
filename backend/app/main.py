@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.routers import chat, evidencia
+from app.routers import chat, evidencia, biblioteca
 app = FastAPI(
     title = "Esperanza API",
     version = "1.0.0"
@@ -16,6 +16,7 @@ app.add_middleware(
 
 app.include_router(chat.router)
 app.include_router(evidencia.router)
+app.include_router(biblioteca.router)
 
 @app.get("/")
 def root():
