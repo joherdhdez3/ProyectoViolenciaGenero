@@ -190,7 +190,7 @@ export const BIBLIOTECA: BibliotecaItem[] = [
   },
 ]
 
-export const BIBLIO_TABS: string[] = ['Todas', 'Leyes', 'Protocolos', 'Sentencias', 'Guías']
+export const BIBLIO_TABS: string[] = ['Todas', 'Leyes', 'Protocolos', 'Derechos']
 
 // ─── Directorio ───────────────────────────────────────────────────────────────
 export const DIRECTORIO: InstitucionDirectorio[] = [

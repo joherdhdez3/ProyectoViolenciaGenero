@@ -75,15 +75,36 @@ export default function PaginaBiblioteca() {
     }
   }
 
-  const filtrados = recursos.filter((item) => {
-    const coincideTab =
-      tabActiva === 'Todas' ||
-      item.tipo.toLowerCase().includes(tabActiva.toLowerCase().slice(0, -1))
-    const coincideQuery =
-      query === '' ||
-      item.titulo.toLowerCase().includes(query.toLowerCase())
-    return coincideTab && coincideQuery
-  })
+const filtrados = recursos.filter((item) => {
+  // 1. Filtro por Buscador (siempre se evalúa)
+  const queryLower = query.toLowerCase();
+  const tituloLower = item.titulo.toLowerCase();
+  const coincideQuery = query === '' || tituloLower.includes(queryLower);
+
+  // 2. Filtro por Pestañas
+  // Si la pestaña es "Todas", no filtramos por tipo
+  if (tabActiva === 'Todas') {
+    return coincideQuery;
+  }
+
+  // 3. Lógica imperativa para las pestañas
+  // Convertimos a minúsculas para comparar sin errores
+  const tipo = item.tipo.toLowerCase();
+  let coincideTab = false;
+
+  if (tabActiva === 'Leyes') {
+    coincideTab = tipo.includes('ley');
+  } else if (tabActiva === 'Protocolos') {
+    coincideTab = tipo.includes('protocolo');
+  } else if (tabActiva === 'Sentencias') {
+    coincideTab = tipo.includes('sentencia');
+  } else if (tabActiva === 'Derechos') {
+    coincideTab = tipo.includes('derecho');
+  }
+
+  // Retornamos si cumple ambas condiciones
+  return coincideTab && coincideQuery;
+});
 
   return (
     <div className="page">
