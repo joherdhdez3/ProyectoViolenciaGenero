@@ -1,0 +1,63 @@
+{
+  "categorias": [
+    {
+      "categoria": "Documentos Oficiales",
+      "evidencias": [
+        "Oficios con sello de acuse de recibido",
+        "Actas de sesión o cabildo firmadas",
+        "Convocatorias oficiales con tu nombre",
+        "Resoluciones o acuerdos institucionales",
+        "Notificaciones formales recibidas"
+      ]
+    },
+    {
+      "categoria": "Comunicaciones Digitales",
+      "evidencias": [
+        "Capturas de pantalla de mensajes (sin recortar, con fecha y hora visible)",
+        "Correos electrónicos (guardar en formato .eml o PDF)",
+        "Capturas de redes sociales con URL visible",
+        "Conversaciones de WhatsApp o Telegram (con metadatos)",
+        "Registros de llamadas con duración y número"
+      ]
+    },
+    {
+      "categoria": "Evidencia Audiovisual",
+      "evidencias": [
+        "Videos de reuniones o sesiones (con metadatos de fecha)",
+        "Grabaciones de audio (con fecha de grabación)",
+        "Fotografías de documentos o hechos (con metadatos GPS)",
+        "Transmisiones en vivo guardadas de redes sociales"
+      ]
+    },
+    {
+      "categoria": "Testimonios",
+      "evidencias": [
+        "Nombres y datos de contacto de testigos presenciales",
+        "Declaraciones escritas firmadas por testigos",
+        "Referencias a personas que pueden corroborar los hechos"
+      ]
+    },
+    {
+      "categoria": "Registros Médicos y Psicológicos",
+      "evidencias": [
+        "Constancias médicas por daños físicos o emocionales",
+        "Informes psicológicos de impacto emocional",
+        "Recetas o prescripciones relacionadas con el evento"
+      ]
+    },
+    {
+      "categoria": "Denuncias y Trámites Previos",
+      "evidencias": [
+        "Número de folio de quejas anteriores ante el IECM",
+        "Acuse de recibo de denuncias ante la Fiscalía",
+        "Resoluciones o respuestas institucionales anteriores"
+      ]
+    }
+  ],
+  "notas_importantes": [
+    "Conserva los originales; entrega solo copias certificadas",
+    "No borres ni edites los archivos digitales",
+    "Almacena todo en un lugar seguro, preferiblemente en la nube",
+    "Documenta cada evidencia con fecha, lugar y contexto"
+  ]
+}

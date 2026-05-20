@@ -1,0 +1,74 @@
+[
+  {
+    "tipo": "Ley General",
+    "anio": "2020",
+    "titulo": "Violencia Política contra las Mujeres en Razón de Género",
+    "desc": "Toda acción u omisión, incluida la tolerancia, basada en elementos de género, ejercida dentro de la esfera pública o privada, que tenga por objeto o resultado limitar, anular o menoscabar el ejercicio efectivo de los derechos políticos y electorales de una o varias mujeres. Incorporada como modalidad de violencia mediante reforma publicada en el Diario Oficial de la Federación el 13 de abril de 2020. Fuente: Artículo 20 Bis, Capítulo IV Bis de la Ley General de Acceso de las Mujeres a una Vida Libre de Violencia (última reforma DOF 16-12-2024)."
+  },
+  {
+    "tipo": "Procedimiento",
+    "anio": "2020",
+    "titulo": "Procedimiento Especial Sancionador",
+    "desc": "Mecanismo expedito ante las autoridades electorales (INE e IECM) para investigar y sancionar conductas de violencia política de forma oportuna. Incluye etapas de queja, investigación, instrucción y resolución, con posibilidad de imponer medidas cautelares desde el inicio del procedimiento. Fuente: Ley General de Instituciones y Procedimientos Electorales y Código de Instituciones y Procedimientos Electorales de la Ciudad de México."
+  },
+  {
+    "tipo": "Medio de Impugnación",
+    "anio": "2020",
+    "titulo": "Juicio para la Protección de los Derechos Político-Electorales del Ciudadano",
+    "desc": "Medio de impugnación ante el Tribunal Electoral del Poder Judicial de la Federación o el Tribunal Electoral de la Ciudad de México con el que las mujeres pueden defender su derecho a votar, ser votadas, asociarse y ejercer el cargo para el que fueron electas cuando sean vulnerados por actos de violencia política. Fuente: Ley General del Sistema de Medios de Impugnación en Materia Electoral, artículos 79 al 85."
+  },
+  {
+    "tipo": "Mecanismo de Protección",
+    "anio": "2020",
+    "titulo": "Medidas de Protección y Cautelares",
+    "desc": "Las autoridades electorales pueden ordenar de forma inmediata: prohibición al agresor de acercarse o comunicarse con la víctima, retiro de contenidos digitales que constituyan violencia política, protección policial, y suspensión provisional de los efectos del acto impugnado. Las medidas se determinan según la naturaleza y gravedad de cada caso. Fuente: Artículos 20 Bis y 27 al 34 de la Ley General de Acceso de las Mujeres a una Vida Libre de Violencia."
+  },
+  {
+    "tipo": "Protocolo Institucional",
+    "anio": "2022",
+    "titulo": "Protocolo del INE para la Atención de Víctimas de Violencia Política contra las Mujeres en Razón de Género",
+    "desc": "Aprobado por el Consejo General del Instituto Nacional Electoral en febrero de 2022 (Acuerdo INE/CG583/2022). Establece los ejes rectores de la atención de primer contacto, el análisis de riesgo y las obligaciones de todas las autoridades electorales para orientar, acompañar y proteger a las mujeres que denuncian violencia política."
+  },
+  {
+    "tipo": "Protocolo Institucional",
+    "anio": "2024",
+    "titulo": "Protocolo del IECM para la Atención de la Violencia Política de Género y Violencia Política contra las Mujeres en Razón de Género",
+    "desc": "Herramienta del Instituto Electoral de la Ciudad de México que incluye conceptos básicos, procedimientos institucionales y principios de atención no discriminatoria. Garantiza asesoramiento jurídico gratuito, confidencialidad y acceso a refugios seguros. Disponible en: iecm.mx/www/marconormativo/docs/Protocolo-IECM-VPGyVPMRG.pdf"
+  },
+  {
+    "tipo": "Ley Local",
+    "anio": "2020",
+    "titulo": "Ley de Acceso de las Mujeres a una Vida Libre de Violencia de la Ciudad de México",
+    "desc": "Marco jurídico local que define y sanciona las distintas modalidades de violencia de género en la capital, incluyendo la violencia política. Otorga facultades específicas a la Fiscalía General de Justicia de la Ciudad de México y a la Secretaría de las Mujeres para intervenir en la protección de las mujeres víctimas."
+  },
+  {
+    "tipo": "Derecho de la Víctima",
+    "anio": "2020",
+    "titulo": "Asesoría Jurídica Gratuita y Especializada",
+    "desc": "Derecho a contar con representación legal gratuita proporcionada por el Estado a través de la Defensoría Pública Electoral o la Fiscalía General de Justicia, especializada en perspectiva de género, desde el momento de la denuncia y durante todo el procedimiento. Fuente: Artículo 20 Bis fracción IX de la Ley General de Acceso de las Mujeres a una Vida Libre de Violencia."
+  },
+  {
+    "tipo": "Derecho de la Víctima",
+    "anio": "2020",
+    "titulo": "Protección contra la Revictimización",
+    "desc": "Las autoridades tienen prohibido emitir juicios de valor sobre la conducta de la víctima, cuestionarla sobre su vida privada o someterla a careos con el agresor. El trato debe ser digno, empático y con perspectiva de género en todo momento del procedimiento. Fuente: Artículos 20 Bis y Ley General de Víctimas, artículo 5, principio de no revictimización."
+  },
+  {
+    "tipo": "Derecho de la Víctima",
+    "anio": "2020",
+    "titulo": "Confidencialidad y Resguardo de Datos Personales",
+    "desc": "La víctima puede solicitar que sus datos personales, domicilio, teléfono y lugar de trabajo se mantengan como información reservada en el expediente, impidiendo el acceso del agresor o de terceros. Fuente: Ley General de Víctimas, artículo 7 fracción XIX, y Ley Federal de Protección de Datos Personales en Posesión de los Particulares."
+  },
+  {
+    "tipo": "Derecho de la Víctima",
+    "anio": "2020",
+    "titulo": "Derecho a Intérprete o Traductor",
+    "desc": "Las mujeres pertenecientes a comunidades o pueblos indígenas tienen derecho constitucional a ser asistidas por intérpretes y defensoras que conozcan su lengua y cultura durante todo el procedimiento. Fuente: Artículo 2 de la Constitución Política de los Estados Unidos Mexicanos y artículo 10 de la Ley General de Derechos Lingüísticos de los Pueblos Indígenas."
+  },
+  {
+    "tipo": "Ley General",
+    "anio": "2020",
+    "titulo": "Reforma a la Constitución en Materia de Paridad",
+    "desc": "La reforma constitucional del 6 de junio de 2019, conocida como paridad en todo, establece que la paridad de género es un principio que debe aplicarse en todos los poderes del Estado y en todos los niveles de gobierno, siendo un mecanismo de prevención estructural de la violencia política. Fuente: Artículos 2, 35, 41, 52, 53, 56, 94 y 115 de la Constitución Política de los Estados Unidos Mexicanos."
+  }
+]

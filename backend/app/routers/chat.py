@@ -16,10 +16,10 @@ def chat(request: ChatRequest):
     
     try: 
     
-       # respuesta = get_chat_response(
-        #   request.mensaje
-        #)
-        respuesta = "mensaje de prueba ya que no tengo tokens"
+        respuesta = get_chat_response(
+           request.mensaje
+        )
+        #respuesta = "mensaje de prueba ya que no tengo tokens"
         pdf_path = generate_pdf(
             request.mensaje,
             respuesta
