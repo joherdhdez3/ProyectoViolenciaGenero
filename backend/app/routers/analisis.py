@@ -112,6 +112,7 @@ def generar_relato_formal(body: RelatoFormalRequest):
             ai_response=caso["analisis"],
             relato_formal=resultado,
             datos_quejosa=body.datos_quejosa.model_dump(),
+            caso_id=body.caso_id,       # <-- ahora se pasa para generar folio anónimo
             pdf_path=pdf_nombre,
         )
     except Exception as e:
@@ -125,12 +126,18 @@ def generar_relato_formal(body: RelatoFormalRequest):
 
 @router.get("/descargar-pdf/{nombre_archivo}")
 def descargar_pdf(nombre_archivo: str):
+    # Validación básica: solo permite nombres de archivo simples (sin path traversal)
+    if "/" in nombre_archivo or "\\" in nombre_archivo or ".." in nombre_archivo:
+        raise HTTPException(status_code=400, detail="Nombre de archivo inválido")
+    if not nombre_archivo.startswith("relato_") or not nombre_archivo.endswith(".pdf"):
+        raise HTTPException(status_code=400, detail="Archivo no permitido")
     if not os.path.exists(nombre_archivo):
         raise HTTPException(status_code=404, detail="PDF no encontrado")
     return FileResponse(
         nombre_archivo,
         media_type="application/pdf",
-        filename="reporte_vpmrg.pdf",
+        filename="orientacion_vpmrg.pdf",
+        headers={"Content-Disposition": "attachment; filename=orientacion_vpmrg.pdf"},
     )
 
 
