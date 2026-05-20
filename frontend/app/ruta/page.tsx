@@ -69,7 +69,7 @@ export default function PaginaRuta() {
     <div className="page">
       <Breadcrumb items={breadcrumbItems} />
 
-      <h1 className="page-title">Tu ruta de denuncia (F04)</h1>
+      <h1 className="page-title">Tu ruta de denuncia</h1>
       <p className="page-subtitle">
         Acciones cronológicas que debes tomar para iniciar tu proceso de denuncia.
         Haz clic en el número de cada paso para marcarlo como completado.

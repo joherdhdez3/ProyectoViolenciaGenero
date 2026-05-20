@@ -84,3 +84,33 @@ export async function enviarRelatoFormal(payload: RelatoFormalPayload): Promise<
 
   return response.json();
 }
+
+export interface EvidenciasResponse {
+  categorias: {
+    categoria: string
+    evidencias: string[]
+  }[]
+  notas_importantes: string[]
+}
+
+// Evidencias sugeridas para un caso específico
+export async function obtenerEvidencias(
+  casoId: string
+): Promise<EvidenciasResponse> {
+  const API_URL =
+    process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8000';
+  
+  // Si no hay casoId, el backend puede manejar un catálogo general
+  const url = `${API_URL}/api/v1/evidencia/catalogo`
+
+  const res = await fetch(url, {
+    method: 'GET',
+    headers: { 'Content-Type': 'application/json' },
+  });
+
+  if (!res.ok) {
+    throw new Error('Error al obtener el catálogo de evidencias');
+  }
+  console.log('Respuesta evidencias:', await res.clone().json());
+  return res.json();
+}

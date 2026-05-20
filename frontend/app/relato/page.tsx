@@ -271,7 +271,8 @@ export default function PaginaRelato() {
             className="btn-outline"
             onClick={() => {
             if (pdfUrl) {
-              window.open(pdfUrl, '_blank') // 📄 Abre el PDF en una pestaña nueva para imprimir/descargar
+              const urlCompleta = `${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'}${pdfUrl}`;
+              window.open(urlCompleta, '_blank');
             } else {
               alert("Primero debes hacer clic en 'Estructurar con IA' para generar el documento.")
             }
