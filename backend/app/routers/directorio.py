@@ -1,14 +1,12 @@
-# backend/app/routers/directorio.py
+import json
 from fastapi import APIRouter
+from pathlib import Path
 
 router = APIRouter(prefix="/api/v1/directorio", tags=["Directorio"])
 
-# Aquí pones tus datos verídicos o la lógica de tu directorio
 @router.get("/")
 def get_directorio():
-    return {
-        "alcaldias": [
-            {"nombre": "Álvaro Obregón", "tel": "55-5483-3800", "email": "distrito18@iecm.mx"}
-            # ... tus datos aquí
-        ]
-    }
+    file_path = Path("app/data/directorio_cdmx.json")
+    with open(file_path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    return data
