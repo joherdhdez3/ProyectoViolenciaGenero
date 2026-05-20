@@ -2,106 +2,114 @@
 
 // app/page.tsx  →  /
 // Pantalla de inicio con textarea de relato libre y grid de módulos.
-// Es Client Component porque gestiona estado local (textarea) y
-// usa el contexto global de relato.
 
-import type { Metadata } from 'next'
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { useRelato } from '@/context/RelatoContext'
 import { AvisoLegal } from '@/components/ui/Breadcrumb'
 
-// Nota: metadata no puede exportarse desde un 'use client'.
-// Si necesitas SEO aquí, mueve el metadata a un layout específico
-// o usa generateMetadata en un Server Component envolvente.
-
 const MODULOS = [
   {
     n:     '01',
     titulo: 'Diagnóstico Inicial IA',
-    desc:   'Identifica si lo que vives es violencia política en razón de género.',
+    desc:   'La IA analiza tu relato e identifica si lo que describes constituye violencia política en razón de género, con base en la legislación electoral vigente.',
     link:   'Ir a diagnóstico →',
     href:   '/diagnostico',
   },
   {
     n:     '02',
     titulo: 'Ruta Institucional',
-    desc:   'Acciones cronológicas y guía para iniciar tu proceso de denuncia.',
+    desc:   'Guía paso a paso con las acciones concretas y las instituciones ante las cuales puedes presentar tu queja, en el orden recomendado.',
     link:   'Ver ruta →',
     href:   '/ruta',
   },
   {
     n:     '03',
     titulo: 'Generador de Relato de Hechos',
-    desc:   'Reorganiza tu relato de forma cronológica y formal bajo estructura jurídica.',
+    desc:   'La IA reorganiza tu relato en lenguaje jurídico formal, listo para integrarse a una queja oficial.',
     link:   'Redactar relato →',
     href:   '/relato',
   },
   {
     n:     '04',
     titulo: 'Checklist de Evidencia',
-    desc:   'Guía jurídica básica para reunir y organizar tus pruebas.',
+    desc:   'Lista personalizada de los elementos probatorios que deberás reunir para fortalecer tu queja.',
     link:   'Ver checklist →',
     href:   '/evidencia',
   },
   {
     n:     '05',
     titulo: 'Biblioteca y Directorio',
-    desc:   'Normativa en lenguaje sencillo, directorio institucional actualizado.',
+    desc:   'Normativa en lenguaje accesible y directorio de instituciones de apoyo en tu alcaldía.',
     link:   'Explorar →',
     href:   '/biblioteca',
   },
 ]
 
-const MAX_CHARS = 2000
+// 5 000 caracteres (~700 palabras): suficiente para relatos detallados
+// sin imponer una limitación que ponga en riesgo la calidad del análisis.
+const MAX_CHARS = 5000
+const MIN_CHARS = 30
 
 export default function PaginaInicio() {
-  const router               = useRouter()
-  const { setRelato }        = useRelato()
-  const [texto, setTexto]    = useState('')
+  const router            = useRouter()
+  const { setRelato }     = useRelato()
+  const [texto, setTexto] = useState('')
 
   const handleAnalizar = () => {
     setRelato(texto)
     router.push('/diagnostico')
   }
 
+  const pct = Math.round((texto.length / MAX_CHARS) * 100)
+
   return (
     <div className="page">
       <div className="inicio-hero">
         <h1>
-          Orientación jurídica para mujeres en violencia política en razón de género
+          Orientación jurídica para mujeres en situación de violencia política en razón de género
         </h1>
         <p>
-          Cuéntanos lo que está pasando. La IA te orientará de forma accesible y
-          confidencial.{' '}
-          <strong>No necesitas proporcionar tu nombre.</strong>
+          Cuéntanos con tus propias palabras lo que has vivido. La IA analizará tu relato
+          de forma accesible y confidencial.{' '}
+          <strong>No necesitas proporcionar tu nombre ni ningún dato personal.</strong>
         </p>
 
         <div className="aviso-anonimato">
-          <span>🔒</span>
+          <span aria-hidden="true">🔒</span>
           <span>
             Esta plataforma es completamente anónima. No recopilamos datos personales
-            identificables.
+            identificables. Puedes escribir con total libertad.
           </span>
         </div>
 
         <textarea
           className="inicio-textarea"
-          placeholder="Escribe aquí con tus propias palabras lo que has vivido…"
+          placeholder="Escribe aquí lo que has vivido. Puedes mencionar fechas, lugares, personas (por cargo o función, no necesariamente por nombre) y cómo te han afectado estos hechos…"
           value={texto}
           maxLength={MAX_CHARS}
           onChange={(e) => setTexto(e.target.value)}
           aria-label="Relato de los hechos"
+          rows={8}
         />
-        <div className="char-count">
-          {texto.length} / {MAX_CHARS}
+
+        <div className="char-count" aria-live="polite">
+          <span style={{ color: pct > 90 ? 'var(--rojo, #dc2626)' : undefined }}>
+            {texto.length.toLocaleString()} / {MAX_CHARS.toLocaleString()} caracteres
+          </span>
+          {texto.length > 0 && texto.length < MIN_CHARS && (
+            <span style={{ color: 'var(--rojo, #dc2626)', marginLeft: 8 }}>
+              Escribe al menos {MIN_CHARS} caracteres para continuar.
+            </span>
+          )}
         </div>
 
         <button
           className="btn-analizar"
           onClick={handleAnalizar}
-          disabled={texto.trim().length < 10}
+          disabled={texto.trim().length < MIN_CHARS}
+          aria-disabled={texto.trim().length < MIN_CHARS}
         >
           Analizar mi situación →
         </button>
@@ -112,7 +120,7 @@ export default function PaginaInicio() {
         <div className="modulos-grid">
           {MODULOS.map((m) => (
             <article className="modulo-col" key={m.n}>
-              <div className="modulo-num">{m.n}</div>
+              <div className="modulo-num" aria-hidden="true">{m.n}</div>
               <h3>{m.titulo}</h3>
               <p>{m.desc}</p>
               <Link href={m.href} className="modulo-link">
