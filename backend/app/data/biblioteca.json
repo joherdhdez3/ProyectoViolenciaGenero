@@ -1,0 +1,62 @@
+[
+  {
+    "tipo": "Ley General",
+    "anio": "2024",
+    "titulo": "Violencia Política contra las Mujeres en Razón de Género (VPMRG)",
+    "desc": "Es toda acción u omisión dirigida a una mujer, por el hecho de ser mujer, que tenga por objeto o resultado limitar, anular o perjudicar el ejercicio de sus derechos políticos y electorales. Fuente: Art. 20 Bis de la LGAMVLV."
+  },
+  {
+    "tipo": "Procedimiento",
+    "anio": "2024",
+    "titulo": "Procedimiento Especial Sancionador (PES)",
+    "desc": "Es un proceso de denuncia rápido y específico ante las autoridades electorales para investigar y sancionar conductas de violencia política de forma oportuna. Fuente: Código de Instituciones y Procedimientos Electorales de la CDMX."
+  },
+  {
+    "tipo": "Juicio Ciudadano",
+    "anio": "2024",
+    "titulo": "Juicio para la Protección de los Derechos Político-Electorales (JDC)",
+    "desc": "Es el medio de impugnación con el que cuentan las mujeres para defender sus derechos de votar, ser votadas, asociarse libremente y ejercer las funciones del cargo para el que fueron electas cuando estos sean vulnerados por actos de violencia política."
+  },
+  {
+    "tipo": "Mecanismo de Protección",
+    "anio": "2024",
+    "titulo": "Medidas precautorias",
+    "desc": "Prohibición de acercarse o comunicarse con la víctima, limitación para asistir o acercarse al domicilio de la víctima o al lugar donde se encuentre, protección policial de la victíma. Las medidas de protección previstas atenderán a la naturaleza y necesidades de cada caso en concreto."
+  },
+  {
+    "tipo": "Protocolo Institucional",
+    "anio": "2023",
+    "titulo": "Protocolo para la Atención de la Violencia Política contra las Mujeres en Razón de Género",
+    "desc": "Guía técnica especializada que establece las obligaciones de todas las autoridades del país para orientar, acompañar y proteger a las mujeres que denuncian agresiones en el ejercicio de sus funciones públicas."
+  },
+  {
+    "tipo": "Ley Local",
+    "anio": "2024",
+    "titulo": "Ley de Acceso de las Mujeres a una Vida Libre de Violencia de la CDMX",
+    "desc": "Marco jurídico estatal que define y sanciona las distintas modalidades de violencia de género en la capital, otorgando facultades específicas a las fiscalías locales y juzgados para intervenir en la protección de las ciudadanas."
+  },
+  {
+    "tipo": "Derecho de la Víctima",
+    "anio": "2026",
+    "titulo": "Asesoría Jurídica Gratuita y Especializada",
+    "desc": "Derecho a contar con una abogada o abogado defensor gratuito proporcionado por el Estado (como la Defensoría Pública Electoral), especializado en perspectiva de género, desde el momento en que se decide presentar la denuncia."
+  },
+  {
+    "tipo": "Derecho de la Víctima",
+    "anio": "2026",
+    "titulo": "Protección contra la Revictimización (Dignidad)",
+    "desc": "Derecho a recibir un trato digno, empático y profesional por parte de las autoridades. Queda estrictamente prohibido que te culpen, duden de tu relato, te hagan preguntas invasivas sobre tu vida privada o te obliguen a carearte con el agresor."
+  },
+  {
+    "tipo": "Derecho de la Víctima",
+    "anio": "2026",
+    "titulo": "Derecho a la Intimidad y Resguardo de Identidad",
+    "desc": "Mecanismo legal para solicitar que tus datos personales, domicilio, teléfono y lugar de trabajo se mantengan bajo estricto secreto (información confidencial) en el expediente, evitando que el agresor o terceros tengan acceso a ellos."
+  },
+  {
+    "tipo": "Derecho de la Víctima",
+    "anio": "2026",
+    "titulo": "Derecho a contar con Intérprete o Traductor",
+    "desc": "Si la víctima pertenece a una comunidad o pueblo indígena, tiene derecho constitucional a ser asistida por personas intérpretes y defensoras que conozcan su lengua, cultura y variantes lingüísticas durante todo el procedimiento."
+  }
+]
