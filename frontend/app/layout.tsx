@@ -7,6 +7,7 @@ import type { Metadata } from 'next'
 import Nav from '@/components/layout/Nav'
 import { RelatoProvider } from '@/context/RelatoContext'
 import './globals.css'
+import EmergencyButton from '@/components/ui/EmergencyButton'
 
 export const metadata: Metadata = {
   title: {
@@ -35,6 +36,7 @@ export default function RootLayout({
             Plataforma VPMRG — Hackathon 2026&nbsp;|&nbsp;
             Orientación inicial, no asesoría jurídica&nbsp;|&nbsp;
             Plataforma anónima · Ciudad de México
+            <EmergencyButton />
           </footer>
         </RelatoProvider>
       </body>
