@@ -2,19 +2,13 @@
 
 // app/diagnostico/page.tsx  →  /diagnostico
 // Muestra el análisis IA del relato de la usuaria.
-// Lee el relato desde el contexto global (RelatoContext).
-// Simula carga con IA; en producción consumiría el endpoint de FastAPI.
+// Las conductas y derechos provienen del backend (no son datos hardcoded).
 
-import type { Metadata } from 'next'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useRelato } from '@/context/RelatoContext'
 import { Breadcrumb, AvisoLegal } from '@/components/ui/Breadcrumb'
-import {
-  CONDUCTAS,
-  DERECHOS,
-  INSTITUCIONES_DIAGNOSTICO,
-} from '@/lib/constants'
+import { INSTITUCIONES_DIAGNOSTICO } from '@/lib/constants'
 import { enviarRelato } from '@/lib/api'
 
 const ACCIONES_SIDEBAR = [
@@ -24,47 +18,65 @@ const ACCIONES_SIDEBAR = [
   { label: '→ Ir a Biblioteca de derechos', href: '/biblioteca' },
 ]
 
+const NIVEL_CONFIG: Record<string, { etiqueta: string; fondo: string; borde: string; texto: string }> = {
+  alto: {
+    etiqueta: 'Riesgo ALTO',
+    fondo:    '#fdf2f2',
+    borde:    '#dc2626',
+    texto:    '#7f1d1d',
+  },
+  medio: {
+    etiqueta: 'Riesgo MEDIO',
+    fondo:    '#fffbeb',
+    borde:    '#d97706',
+    texto:    '#78350f',
+  },
+  bajo: {
+    etiqueta: 'Riesgo BAJO',
+    fondo:    '#f0fdf4',
+    borde:    '#16a34a',
+    texto:    '#14532d',
+  },
+  no_identificado: {
+    etiqueta: 'No identificado',
+    fondo:    '#f8fafc',
+    borde:    '#94a3b8',
+    texto:    '#475569',
+  },
+}
+
 export default function PaginaDiagnostico() {
   const { relato, casoId, setCasoId } = useRelato()
-  const [listo, setListo] = useState(false)
-  const [respuesta, setRespuesta] = useState('')
+  const [listo, setListo]             = useState(false)
+  const [error, setError]             = useState(false)
+  const [respuesta, setRespuesta]     = useState('')
   const [nivelRiesgo, setNivelRiesgo] = useState('')
+  // Conductas y derechos vienen de la IA, no de constantes fijas
+  const [conductas, setConductas]     = useState<string[]>([])
+  const [derechos, setDerechos]       = useState<string[]>([])
 
-  // useEffect para simular latencia de la API de IA.
-  // El array vacío garantiza que corre solo al montar el componente.
   useEffect(() => {
-    // Función interna asíncrona
-  const realizarDiagnostico = async () => {
-    try {
-      // Se llama a la API pasando el relato
-      const data = await enviarRelato({ relato_usuario:relato })
-      // Si hay respuesta del backend
-      if (data.caso_id) {
-        setCasoId(data.caso_id);
+    const realizarDiagnostico = async () => {
+      if (!relato) {
+        setListo(true)
+        return
       }
-
-      if (data.resumen_orientacion) {
-        setRespuesta(data.resumen_orientacion);
+      try {
+        const data = await enviarRelato({ relato_usuario: relato })
+        if (data.caso_id)            setCasoId(data.caso_id)
+        if (data.resumen_orientacion) setRespuesta(data.resumen_orientacion)
+        if (data.nivel_vpmrg)        setNivelRiesgo(data.nivel_vpmrg)
+        if (Array.isArray(data.conductas))          setConductas(data.conductas)
+        if (Array.isArray(data.derechos_vulnerados)) setDerechos(data.derechos_vulnerados)
+      } catch (err) {
+        console.error('Error al conectar con el backend:', err)
+        setError(true)
+      } finally {
+        setListo(true)
       }
-
-      if (data.nivel_vpmrg) {
-        setNivelRiesgo(data.nivel_vpmrg);
-      }
-      setListo(true);
-    } catch (error) {
-      console.error("Error al conectar con el backend:", error)
-      setListo(true);
     }
-  };
-
-  // Si hay relato, se ejecuta la función
-  if (relato) {
-    realizarDiagnostico();
-  } else {
-    setListo(true);
-  }
-}, [relato, setCasoId])
-   
+    realizarDiagnostico()
+  }, [relato, setCasoId])
 
   const breadcrumbItems = [
     { label: 'Inicio',       href: '/'     },
@@ -76,11 +88,13 @@ export default function PaginaDiagnostico() {
       <div className="page">
         <div className="loading-box" role="status" aria-live="polite">
           <div className="spinner" aria-hidden="true" />
-          Analizando tu relato con IA…
+          Analizando tu relato con IA… esto puede tardar unos segundos.
         </div>
       </div>
     )
   }
+
+  const nivelCfg = NIVEL_CONFIG[(nivelRiesgo || '').toLowerCase()] ?? NIVEL_CONFIG['no_identificado']
 
   return (
     <div className="page">
@@ -92,42 +106,88 @@ export default function PaginaDiagnostico() {
       </p>
       <hr className="div" />
 
+      {/* Alerta de error de conexión */}
+      {error && (
+        <div role="alert" style={{
+          padding: '14px 18px',
+          borderRadius: '8px',
+          backgroundColor: '#fffbeb',
+          borderLeft: '5px solid #d97706',
+          marginBottom: '20px',
+          fontSize: '14px',
+          color: '#78350f',
+        }}>
+          <strong>⚠️ Sin conexión con el servidor.</strong> Se muestra una vista parcial.
+          Verifica que el backend esté activo y vuelve a intentarlo.
+        </div>
+      )}
+
       <div className="diag-layout">
         {/* ── Columna principal ── */}
         <div>
-          <div className="section-label">Tu relato</div>
-          <blockquote className="relato-box">
-            &ldquo;{relato || 'Cuéntame lo que pasó… — texto ingresado por la usuaria.'}&rdquo;
-          </blockquote>
+          {/* Relato */}
+          {relato && (
+            <>
+              <div className="section-label">Tu relato</div>
+              <blockquote className="relato-box">
+                &ldquo;{relato}&rdquo;
+              </blockquote>
+            </>
+          )}
 
-          <div className="section-label">Conductas identificadas</div>
-          <ul className="conductas-grid" aria-label="Conductas identificadas">
-            {CONDUCTAS.map((c) => (
-              <li key={c} className="conducta-chip">{c}</li>
-            ))}
-          </ul>
-
+          {/* Nivel de riesgo */}
           {nivelRiesgo && (
-            <div className="alerta-riesgo" style={{
-              padding: '15px',
+            <div style={{
+              padding: '14px 18px',
               borderRadius: '8px',
-              backgroundColor: 'var(--rojo-claro, #fdf2f2)',
-              borderLeft: '5px solid var(--rojo, #de350b)',
-              marginBottom: '20px'
+              backgroundColor: nivelCfg.fondo,
+              borderLeft: `5px solid ${nivelCfg.borde}`,
+              marginBottom: '20px',
+              color: nivelCfg.texto,
             }}>
-            <strong>Nivel de riesgo identificado:</strong> {nivelRiesgo}
-          </div>
-        )}
+              <strong>Nivel de riesgo identificado: {nivelCfg.etiqueta}</strong>
+            </div>
+          )}
 
-          <div className="section-label">Análisis de la IA</div>
-          <div className="respuesta-box">
-            {respuesta || "No se recibió respuesta del análisis."}
-          </div>
+          {/* Análisis narrativo */}
+          {respuesta && (
+            <>
+              <div className="section-label">Análisis de la IA</div>
+              <div className="respuesta-box">{respuesta}</div>
+            </>
+          )}
 
-          <div className="section-label">Derechos vulnerados</div>
-          <ul className="derechos-list">
-            {DERECHOS.map((d) => <li key={d}>{d}</li>)}
-          </ul>
+          {/* Conductas — vienen de la IA */}
+          {conductas.length > 0 && (
+            <>
+              <div className="section-label">Conductas identificadas</div>
+              <ul className="conductas-grid" aria-label="Conductas identificadas">
+                {conductas.map((c) => (
+                  <li key={c} className="conducta-chip">{c}</li>
+                ))}
+              </ul>
+            </>
+          )}
+
+          {/* Derechos — vienen de la IA */}
+          {derechos.length > 0 && (
+            <>
+              <div className="section-label">Derechos vulnerados</div>
+              <ul className="derechos-list">
+                {derechos.map((d) => <li key={d}>{d}</li>)}
+              </ul>
+            </>
+          )}
+
+          {/* Mensaje si no hubo relato */}
+          {!relato && !error && (
+            <div style={{ padding: '20px', color: 'var(--gris)', textAlign: 'center' }}>
+              <p>No se encontró un relato activo.</p>
+              <Link href="/" className="btn-back" style={{ marginTop: 12, display: 'inline-block' }}>
+                ← Volver al inicio para ingresar tu relato
+              </Link>
+            </div>
+          )}
 
           <div className="section-label">Instituciones competentes</div>
           {INSTITUCIONES_DIAGNOSTICO.map((inst) => (
@@ -136,9 +196,7 @@ export default function PaginaDiagnostico() {
                 <div className="inst-nombre">{inst.nombre}</div>
                 <div className="inst-desc">{inst.desc}</div>
               </div>
-              <Link href="/directorio" className="link-ver">
-                Ver →
-              </Link>
+              <Link href="/directorio" className="link-ver">Ver →</Link>
             </div>
           ))}
         </div>
@@ -157,8 +215,8 @@ export default function PaginaDiagnostico() {
               ))}
             </nav>
             <div className="aviso-small">
-              <span aria-hidden="true"></span>
-              <span>Esta orientación es inicial y no sustituye la asesoría jurídica.</span>
+              <span aria-hidden="true">⚖️</span>
+              <span>Esta orientación es inicial y no sustituye la asesoría jurídica profesional.</span>
             </div>
           </div>
         </aside>
@@ -166,9 +224,7 @@ export default function PaginaDiagnostico() {
 
       <AvisoLegal />
       <div style={{ marginTop: 20 }}>
-        <Link href="/" className="btn-back">
-          ← Volver al inicio
-        </Link>
+        <Link href="/" className="btn-back">← Volver al inicio</Link>
       </div>
     </div>
   )
