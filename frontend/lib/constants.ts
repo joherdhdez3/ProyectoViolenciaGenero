@@ -76,12 +76,12 @@ export const INSTITUCIONES_DIAGNOSTICO: InstitucionDiagnostico[] = [
     desc:   'Obstaculización del cargo / exclusión de decisiones',
   },
   {
-    nombre: 'TEPJF',
+    nombre: 'TEPJF — Tribunal Electoral del Poder Judicial de la Federación',
     desc:   'Omisiones de autoridades electorales locales',
   },
   {
-    nombre: 'Fiscalía Especializada (FEPADE)',
-    desc:   'Violencia digital / difamación',
+    nombre: 'FEDE-FGR — Fiscalía Especializada en Delitos Electorales',
+    desc:   'Violencia digital / difamación (antes FEPADE, hoy adscrita a la FGR)',
   },
 ]
 
@@ -100,8 +100,8 @@ export const RUTA_PASOS: RutaPaso[] = [
     linkTo:    null,
   },
   {
-    titulo:    'Denuncia ante la Fiscalía Especializada (FEPADE)',
-    desc:      'Por difusión de información falsa como acto de violencia digital y difamación. Puedes presentar denuncia en línea o de forma presencial.',
+    titulo:    'Denuncia ante la FEDE-FGR — Fiscalía Especializada en Delitos Electorales',
+    desc:      'Por difusión de información falsa, violencia digital o difamación como instrumentos de violencia política. Puedes presentar denuncia en línea o de forma presencial. Tel: 800 833 3233.',
     linkLabel: null,
     linkTo:    null,
   },
@@ -200,7 +200,7 @@ export const DIRECTORIO: InstitucionDirectorio[] = [
     ambito: 'Nacional',
     tipo:   'Institutos electorales',
     tel:    '800 433 2000',
-    email:  'unitecgenero@ine.mx',
+    email:  'atencion.ciudadana@ine.mx',
     desc:   'Quejas por obstaculización del cargo, exclusión de decisiones y violencia simbólica en el ámbito electoral.',
   },
   {
@@ -209,17 +209,17 @@ export const DIRECTORIO: InstitucionDirectorio[] = [
     ambito: 'Nacional',
     tipo:   'Tribunales',
     tel:    '800 835 3783',
-    email:  'orientacion@tepjf.gob.mx',
+    email:  'contacto@te.gob.mx',
     desc:   'Recurso de apelación y juicio de la ciudadanía. Segunda instancia ante omisiones de autoridades electorales.',
   },
   {
-    nombre: 'FEPADE — Fiscalía Especializada',
+    nombre: 'FEDE-FGR — Fiscalía Especializada en Delitos Electorales',
     area:   'Ministerio Público Federal',
     ambito: 'Nacional',
     tipo:   'Fiscalías',
-    tel:    '800 FEPADE1',
-    email:  'atencion.ciudadana@pgr.gob.mx',
-    desc:   'Delitos electorales, violencia digital y difamación como instrumentos de violencia política de género.',
+    tel:    '800 833 3233',
+    email:  'atencion.ciudadana@fgr.org.mx',
+    desc:   'Delitos electorales, violencia digital y difamación como instrumentos de violencia política de género. Antes conocida como FEPADE; desde 2019 adscrita a la FGR.',
   },
   {
     nombre: 'IECM — Instituto Electoral de la Ciudad de México',
@@ -235,7 +235,7 @@ export const DIRECTORIO: InstitucionDirectorio[] = [
     area:   'Secretaría de las Mujeres',
     ambito: 'Ciudad de México',
     tipo:   'Redes de apoyo',
-    tel:    '55 5512 5898',
+    tel:    '55 5512 2836',
     email:  'atencion@semujeres.cdmx.gob.mx',
     desc:   'Orientación y acompañamiento para mujeres en CDMX. Atención especializada en violencia política y de género.',
   },
