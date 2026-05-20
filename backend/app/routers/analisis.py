@@ -105,7 +105,10 @@ def generar_relato_formal(body: RelatoFormalRequest):
     _casos[body.caso_id]["relato_formal"] = resultado
     _casos[body.caso_id]["datos_quejosa"] = body.datos_quejosa.model_dump()
 
-    pdf_nombre = f"relato_{body.caso_id}.pdf"
+    pdf_nombre = os.path.join(
+        "pdfs",
+        f"relato_{body.caso_id}.pdf"
+    )
     try:
         generate_pdf(
             user_message=caso["relato_usuario"],
@@ -125,10 +128,17 @@ def generar_relato_formal(body: RelatoFormalRequest):
 
 @router.get("/descargar-pdf/{nombre_archivo}")
 def descargar_pdf(nombre_archivo: str):
-    if not os.path.exists(nombre_archivo):
-        raise HTTPException(status_code=404, detail="PDF no encontrado")
+
+    ruta_pdf = os.path.join("pdfs", nombre_archivo)
+
+    if not os.path.exists(ruta_pdf):
+        raise HTTPException(
+            status_code=404,
+            detail="PDF no encontrado"
+        )
+
     return FileResponse(
-        nombre_archivo,
+        ruta_pdf,
         media_type="application/pdf",
         filename="reporte_vpmrg.pdf",
     )

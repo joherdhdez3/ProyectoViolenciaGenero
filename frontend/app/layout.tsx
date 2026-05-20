@@ -6,6 +6,7 @@
 import type { Metadata } from 'next'
 import Nav from '@/components/layout/Nav'
 import { RelatoProvider } from '@/context/RelatoContext'
+import EmergencyButton from "@/components/ui/EmergencyButton";
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -36,6 +37,7 @@ export default function RootLayout({
             Orientación inicial, no asesoría jurídica&nbsp;|&nbsp;
             Plataforma anónima · Ciudad de México
           </footer>
+          <EmergencyButton />
         </RelatoProvider>
       </body>
     </html>
