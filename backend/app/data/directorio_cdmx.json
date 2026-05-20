@@ -1,141 +1,273 @@
 {
-  "Iztapalapa": [
-    {
-      "institucion": "Dirección Distrital IECM - Distrito XXIV",
-      "direccion": "Av. San Lorenzo Tezonco 140, Iztapalapa, CDMX",
-      "telefono": "55-5133-1111",
-      "horario": "09:00 a 16:00, Lunes a Viernes"
-    },
-    {
-      "institucion": "Fiscalía Especializada VPMRG - CDMX",
-      "direccion": "Av. Rojo Gómez 130, Iztapalapa, CDMX",
-      "telefono": "800-711-8144",
-      "horario": "09:00 a 18:00, Lunes a Viernes"
-    }
-  ],
-  "Álvaro Obregón": [
-    {
-      "institucion": "Dirección Distrital IECM - Distrito X",
-      "direccion": "Av. Revolución 1546, Álvaro Obregón, CDMX",
-      "telefono": "55-5133-1111",
-      "horario": "09:00 a 16:00, Lunes a Viernes"
-    }
-  ],
-  "Benito Juárez": [
-    {
-      "institucion": "Dirección Distrital IECM - Distrito XIV",
-      "direccion": "Insurgentes Sur 800, Benito Juárez, CDMX",
-      "telefono": "55-5133-1111",
-      "horario": "09:00 a 16:00, Lunes a Viernes"
-    }
-  ],
-  "Coyoacán": [
-    {
-      "institucion": "Dirección Distrital IECM - Distrito XX",
-      "direccion": "Av. Universidad 1900, Coyoacán, CDMX",
-      "telefono": "55-5133-1111",
-      "horario": "09:00 a 16:00, Lunes a Viernes"
-    }
-  ],
-  "Cuauhtémoc": [
-    {
-      "institucion": "Sede Central IECM",
-      "direccion": "Huizaches 25, Rancho Los Colorines, CDMX",
-      "telefono": "55-5133-1111",
-      "horario": "09:00 a 18:00, Lunes a Viernes"
-    },
-    {
-      "institucion": "Tribunal Electoral de la CDMX (TECDMX)",
-      "direccion": "Av. Juárez 8, Centro Histórico, CDMX",
-      "telefono": "55-5512-2323",
-      "horario": "09:00 a 15:00, Lunes a Viernes"
-    }
-  ],
   "Gustavo A. Madero": [
     {
-      "institucion": "Dirección Distrital IECM - Distrito V",
-      "direccion": "Av. Insurgentes Norte 1587, GAM, CDMX",
-      "telefono": "55-5133-1111",
+      "institucion": "Instituto Electoral de la Ciudad de México - Dirección Distrital 1",
+      "direccion": "Guadalupe Victoria 258, colonia Cuautepec de Madero, Gustavo A. Madero, C.P. 07200",
+      "telefono": "55-5483-3800 ext. 7001",
       "horario": "09:00 a 16:00, Lunes a Viernes"
-    }
-  ],
-  "Miguel Hidalgo": [
+    },
     {
-      "institucion": "Dirección Distrital IECM - Distrito XV",
-      "direccion": "Lago Zurich 245, Miguel Hidalgo, CDMX",
-      "telefono": "55-5133-1111",
+      "institucion": "Instituto Electoral de la Ciudad de México - Dirección Distrital 2",
+      "direccion": "Calzada de los Misterios 670, colonia Industrial, Gustavo A. Madero, C.P. 07800",
+      "telefono": "55-5781-3943",
       "horario": "09:00 a 16:00, Lunes a Viernes"
-    }
-  ],
-  "Tlalpan": [
+    },
     {
-      "institucion": "Dirección Distrital IECM - Distrito XXVI",
-      "direccion": "Periférico Sur 5000, Tlalpan, CDMX",
-      "telefono": "55-5133-1111",
+      "institucion": "Instituto Electoral de la Ciudad de México - Dirección Distrital 4",
+      "direccion": "Oriente 153 número 3406, colonia Salvador Díaz Mirón, Gustavo A. Madero, C.P. 07400",
+      "telefono": "55-5767-6286",
       "horario": "09:00 a 16:00, Lunes a Viernes"
-    }
-  ],
-  "Xochimilco": [
+    },
     {
-      "institucion": "Dirección Distrital IECM - Distrito XXVII",
-      "direccion": "Av. Morelos 6, Xochimilco, CDMX",
-      "telefono": "55-5133-1111",
+      "institucion": "Instituto Electoral de la Ciudad de México - Dirección Distrital 6",
+      "direccion": "Avenida 551 número 208, colonia San Juan de Aragón 2a Sección, Gustavo A. Madero, C.P. 07969",
+      "telefono": "55-5750-7884",
       "horario": "09:00 a 16:00, Lunes a Viernes"
     }
   ],
   "Azcapotzalco": [
     {
-      "institucion": "Dirección Distrital IECM - Distrito II",
-      "direccion": "Av. Azcapotzalco 321, CDMX",
-      "telefono": "55-5133-1111",
+      "institucion": "Instituto Electoral de la Ciudad de México - Dirección Distrital 3",
+      "direccion": "Avenida 22 de Febrero 251, colonia Santa María Malinalco, Azcapotzalco, C.P. 02050",
+      "telefono": "55-5353-7926",
       "horario": "09:00 a 16:00, Lunes a Viernes"
-    }
-  ],
-  "Cuajimalpa": [
+    },
     {
-      "institucion": "Módulo IECM Cuajimalpa",
-      "direccion": "Av. Juárez 44, Cuajimalpa, CDMX",
-      "telefono": "55-5133-1111",
-      "horario": "09:00 a 16:00, Lunes a Viernes"
-    }
-  ],
-  "Iztacalco": [
-    {
-      "institucion": "Dirección Distrital IECM - Distrito XXI",
-      "direccion": "Av. Río Churubusco 50, Iztacalco, CDMX",
-      "telefono": "55-5133-1111",
-      "horario": "09:00 a 16:00, Lunes a Viernes"
-    }
-  ],
-  "Magdalena Contreras": [
-    {
-      "institucion": "Módulo IECM Magdalena Contreras",
-      "direccion": "Prolongación Insurgentes Sur 3500, CDMX",
-      "telefono": "55-5133-1111",
+      "institucion": "Instituto Electoral de la Ciudad de México - Dirección Distrital 5",
+      "direccion": "Cairo 8, colonia Clavería, Azcapotzalco, C.P. 02080",
+      "telefono": "55-5561-2674",
       "horario": "09:00 a 16:00, Lunes a Viernes"
     }
   ],
   "Milpa Alta": [
     {
-      "institucion": "Módulo IECM Milpa Alta",
-      "direccion": "Av. Constitución 10, San Pablo Oztotepec, CDMX",
-      "telefono": "55-5133-1111",
+      "institucion": "Instituto Electoral de la Ciudad de México - Dirección Distrital 7",
+      "direccion": "Cuauhtémoc Norte 84, Pueblo San Pedro Atocpan, Milpa Alta, C.P. 12200",
+      "telefono": "55-5844-2633",
       "horario": "09:00 a 15:00, Lunes a Viernes"
     }
   ],
   "Tláhuac": [
     {
-      "institucion": "Módulo IECM Tláhuac",
-      "direccion": "Av. Tláhuac 5600, CDMX",
-      "telefono": "55-5133-1111",
+      "institucion": "Instituto Electoral de la Ciudad de México - Dirección Distrital 8",
+      "direccion": "General Manuel M. Flores 35, colonia Barrio de Santa Ana Zapotitlán, Tláhuac, C.P. 13300",
+      "telefono": "55-5841-9461",
       "horario": "09:00 a 16:00, Lunes a Viernes"
+    }
+  ],
+  "Cuauhtémoc": [
+    {
+      "institucion": "Instituto Electoral de la Ciudad de México - Sede Central",
+      "direccion": "Huizaches 25, colonia Rancho Los Colorines, Tlalpan, C.P. 14386",
+      "telefono": "55-5483-3800",
+      "horario": "09:00 a 17:00, Lunes a Viernes"
+    },
+    {
+      "institucion": "Instituto Electoral de la Ciudad de México - Dirección Distrital 9",
+      "direccion": "Maple 80, colonia Santa María Insurgentes, Cuauhtémoc, C.P. 06430",
+      "telefono": "55-5597-7238",
+      "horario": "09:00 a 16:00, Lunes a Viernes"
+    },
+    {
+      "institucion": "Instituto Electoral de la Ciudad de México - Dirección Distrital 12",
+      "direccion": "Río Amazonas 36, colonia Cuauhtémoc, Cuauhtémoc, C.P. 06500",
+      "telefono": "55-5535-5807",
+      "horario": "09:00 a 16:00, Lunes a Viernes"
+    },
+    {
+      "institucion": "Tribunal Electoral de la Ciudad de México",
+      "direccion": "Avenida Juárez 8, Centro Histórico, Cuauhtémoc, C.P. 06010",
+      "telefono": "55-5512-2323",
+      "horario": "09:00 a 15:00, Lunes a Viernes"
+    },
+    {
+      "institucion": "Instituto Nacional Electoral - Junta Local Ejecutiva Ciudad de México",
+      "direccion": "Tejocotes 164, colonia Tlacoquemecatl del Valle, Benito Juárez, C.P. 03200",
+      "telefono": "800-433-2000",
+      "horario": "09:00 a 17:00, Lunes a Viernes"
+    },
+    {
+      "institucion": "Secretaría de las Mujeres de la Ciudad de México",
+      "direccion": "Avenida Morelos 20, colonia Centro, Cuauhtémoc, C.P. 06000",
+      "telefono": "55-5512-2836",
+      "horario": "09:00 a 18:00, Lunes a Viernes"
+    },
+    {
+      "institucion": "Fiscalía Especializada en Violencia Política contra las Mujeres en Razón de Género",
+      "direccion": "Avenida Rojo Gómez 130, Iztapalapa, C.P. 09600",
+      "telefono": "800-711-8144",
+      "horario": "09:00 a 18:00, Lunes a Viernes"
     }
   ],
   "Venustiano Carranza": [
     {
-      "institucion": "Dirección Distrital IECM - Distrito XXIII",
-      "direccion": "Av. Fray Servando Teresa de Mier 200, CDMX",
-      "telefono": "55-5133-1111",
+      "institucion": "Instituto Electoral de la Ciudad de México - Dirección Distrital 10",
+      "direccion": "Manuel Rivera Cambas 61, colonia Jardín Balbuena, Venustiano Carranza, C.P. 15900",
+      "telefono": "55-5704-6708",
+      "horario": "09:00 a 16:00, Lunes a Viernes"
+    }
+  ],
+  "Iztacalco": [
+    {
+      "institucion": "Instituto Electoral de la Ciudad de México - Dirección Distrital 11",
+      "direccion": "Oriente 243-B número 101, colonia Agrícola Oriental, Iztacalco, C.P. 08500",
+      "telefono": "55-5558-7765",
+      "horario": "09:00 a 16:00, Lunes a Viernes"
+    },
+    {
+      "institucion": "Instituto Electoral de la Ciudad de México - Dirección Distrital 15",
+      "direccion": "Avenida Santiago 138, Barrio Santiago Sur, Iztacalco, C.P. 08800",
+      "telefono": "55-5579-2098",
+      "horario": "09:00 a 16:00, Lunes a Viernes"
+    }
+  ],
+  "Miguel Hidalgo": [
+    {
+      "institucion": "Instituto Electoral de la Ciudad de México - Dirección Distrital 13",
+      "direccion": "Constitución 35, colonia Escandón, Miguel Hidalgo, C.P. 11800",
+      "telefono": "55-5399-7244",
+      "horario": "09:00 a 16:00, Lunes a Viernes"
+    }
+  ],
+  "Tlalpan": [
+    {
+      "institucion": "Instituto Electoral de la Ciudad de México - Dirección Distrital 14",
+      "direccion": "Tzinal 347, colonia Héroes de Padierna, Tlalpan, C.P. 14200",
+      "telefono": "55-5630-2111",
+      "horario": "09:00 a 16:00, Lunes a Viernes"
+    },
+    {
+      "institucion": "Instituto Electoral de la Ciudad de México - Dirección Distrital 16",
+      "direccion": "5 de Mayo 43, Pueblo de San Pedro Mártir, Tlalpan, C.P. 14650",
+      "telefono": "55-5573-4710",
+      "horario": "09:00 a 16:00, Lunes a Viernes"
+    }
+  ],
+  "Benito Juárez": [
+    {
+      "institucion": "Instituto Electoral de la Ciudad de México - Dirección Distrital 17",
+      "direccion": "Xochicalco 465, colonia Vértiz Narvarte, Benito Juárez, C.P. 03600",
+      "telefono": "55-5651-2210",
+      "horario": "09:00 a 16:00, Lunes a Viernes"
+    }
+  ],
+  "Álvaro Obregón": [
+    {
+      "institucion": "Instituto Electoral de la Ciudad de México - Dirección Distrital 18",
+      "direccion": "Benvenuto Cellini 105, colonia Alfonso XIII, Álvaro Obregón, C.P. 01460",
+      "telefono": "55-5423-1053",
+      "horario": "09:00 a 16:00, Lunes a Viernes"
+    },
+    {
+      "institucion": "Instituto Electoral de la Ciudad de México - Dirección Distrital 23",
+      "direccion": "Calzada al Desierto de los Leones 4762, colonia Tetelpan, Álvaro Obregón, C.P. 01780",
+      "telefono": "55-1739-1020",
+      "horario": "09:00 a 16:00, Lunes a Viernes"
+    },
+    {
+      "institucion": "Instituto Electoral de la Ciudad de México - Dirección Distrital 32",
+      "direccion": "Puerto Hidalgo, Manzana 11 Lote 20, colonia Ampliación Piloto Adolfo López Mateos, Álvaro Obregón, C.P. 01298",
+      "telefono": "55-5666-7826",
+      "horario": "09:00 a 16:00, Lunes a Viernes"
+    }
+  ],
+  "Xochimilco": [
+    {
+      "institucion": "Instituto Electoral de la Ciudad de México - Dirección Distrital 19",
+      "direccion": "Avenida México 5601, colonia Huichapan, Xochimilco, C.P. 16030",
+      "telefono": "55-5786-1732",
+      "horario": "09:00 a 16:00, Lunes a Viernes"
+    },
+    {
+      "institucion": "Instituto Electoral de la Ciudad de México - Dirección Distrital 25",
+      "direccion": "Avenida 5 de Mayo 107, Barrio Xaltocán, Xochimilco, C.P. 16090",
+      "telefono": "55-5676-4156",
+      "horario": "09:00 a 16:00, Lunes a Viernes"
+    }
+  ],
+  "Cuajimalpa": [
+    {
+      "institucion": "Instituto Electoral de la Ciudad de México - Dirección Distrital 20",
+      "direccion": "Arteaga y Salazar 453, colonia Contadero, Cuajimalpa de Morelos, C.P. 05500",
+      "telefono": "55-5813-8517",
+      "horario": "09:00 a 16:00, Lunes a Viernes"
+    }
+  ],
+  "Iztapalapa": [
+    {
+      "institucion": "Instituto Electoral de la Ciudad de México - Dirección Distrital 21",
+      "direccion": "Rafael García Moreno, Lote 63 Manzana 14, colonia Barrio San Miguel, Iztapalapa, C.P. 09360",
+      "telefono": "55-5642-7014",
+      "horario": "09:00 a 16:00, Lunes a Viernes"
+    },
+    {
+      "institucion": "Instituto Electoral de la Ciudad de México - Dirección Distrital 22",
+      "direccion": "José Peón del Valle, Manzana 47 Lote 5, colonia Santa Martha Acatitla Sur, Iztapalapa, C.P. 09530",
+      "telefono": "55-5738-6586",
+      "horario": "09:00 a 16:00, Lunes a Viernes"
+    },
+    {
+      "institucion": "Instituto Electoral de la Ciudad de México - Dirección Distrital 24",
+      "direccion": "Agricultores 315, colonia Minerva, Iztapalapa, C.P. 09810",
+      "telefono": "55-5686-2972",
+      "horario": "09:00 a 16:00, Lunes a Viernes"
+    },
+    {
+      "institucion": "Instituto Electoral de la Ciudad de México - Dirección Distrital 27",
+      "direccion": "Oyamel, Lote 4 Manzana 12, colonia Segunda Ampliación de Santiago Acahualtepec, Iztapalapa, C.P. 09609",
+      "telefono": "55-5832-6509",
+      "horario": "09:00 a 16:00, Lunes a Viernes"
+    },
+    {
+      "institucion": "Instituto Electoral de la Ciudad de México - Dirección Distrital 28",
+      "direccion": "Avenida Paseo de las Galias 35, colonia Lomas Estrella Segunda Sección II, Iztapalapa, C.P. 09890",
+      "telefono": "55-5608-3570",
+      "horario": "09:00 a 16:00, Lunes a Viernes"
+    },
+    {
+      "institucion": "Instituto Electoral de la Ciudad de México - Dirección Distrital 29",
+      "direccion": "Miguel Hidalgo, Manzana 67 Lote 27, Pueblo de Santa Cruz Meyehualco, Iztapalapa, C.P. 09700",
+      "telefono": "55-5595-9920",
+      "horario": "09:00 a 16:00, Lunes a Viernes"
+    },
+    {
+      "institucion": "Instituto Electoral de la Ciudad de México - Dirección Distrital 31",
+      "direccion": "Jardín de los Claveles, Manzana 11 Lote 4, colonia Jardines de San Lorenzo, Iztapalapa, C.P. 09940",
+      "telefono": "55-5642-7216",
+      "horario": "09:00 a 16:00, Lunes a Viernes"
+    },
+    {
+      "institucion": "Instituto Nacional de las Mujeres - Unidad Iztapalapa",
+      "direccion": "Camino Cerro de la Estrella s/n, Centro Social Villa Estrella Módulo 4, colonia Santuario Aculco, Iztapalapa, C.P. 09009",
+      "telefono": "55-5685-2546",
+      "horario": "09:00 a 18:00, Lunes a Viernes"
+    }
+  ],
+  "Coyoacán": [
+    {
+      "institucion": "Instituto Electoral de la Ciudad de México - Dirección Distrital 26",
+      "direccion": "Holanda 21, colonia San Diego Churubusco, Coyoacán, C.P. 04120",
+      "telefono": "55-5483-3800 ext. 7026",
+      "horario": "09:00 a 16:00, Lunes a Viernes"
+    },
+    {
+      "institucion": "Instituto Electoral de la Ciudad de México - Dirección Distrital 30",
+      "direccion": "Avenida Ejido San Francisco Culhuacán 170, colonia Ex Ejido San Francisco Culhuacán, Coyoacán, C.P. 04420",
+      "telefono": "55-5689-6547",
+      "horario": "09:00 a 16:00, Lunes a Viernes"
+    },
+    {
+      "institucion": "Instituto Nacional de las Mujeres - Unidad Coyoacán",
+      "direccion": "Leopoldo Salazar s/n, esquina González Peña, colonia Copilco el Alto, Coyoacán, C.P. 04360",
+      "telefono": "55-5658-2167",
+      "horario": "09:00 a 18:00, Lunes a Viernes"
+    }
+  ],
+  "Magdalena Contreras": [
+    {
+      "institucion": "Instituto Electoral de la Ciudad de México - Dirección Distrital 33",
+      "direccion": "Santiago 493, colonia Lomas Quebradas, Magdalena Contreras, C.P. 10000",
+      "telefono": "55-5681-0096",
       "horario": "09:00 a 16:00, Lunes a Viernes"
     }
   ]

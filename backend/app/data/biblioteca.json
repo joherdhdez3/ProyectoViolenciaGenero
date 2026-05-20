@@ -1,62 +1,74 @@
 [
   {
     "tipo": "Ley General",
-    "anio": "2024",
-    "titulo": "Violencia Política contra las Mujeres en Razón de Género (VPMRG)",
-    "desc": "Es toda acción u omisión dirigida a una mujer, por el hecho de ser mujer, que tenga por objeto o resultado limitar, anular o perjudicar el ejercicio de sus derechos políticos y electorales. Fuente: Art. 20 Bis de la LGAMVLV."
+    "anio": "2020",
+    "titulo": "Violencia Política contra las Mujeres en Razón de Género",
+    "desc": "Toda acción u omisión, incluida la tolerancia, basada en elementos de género, ejercida dentro de la esfera pública o privada, que tenga por objeto o resultado limitar, anular o menoscabar el ejercicio efectivo de los derechos políticos y electorales de una o varias mujeres. Incorporada como modalidad de violencia mediante reforma publicada en el Diario Oficial de la Federación el 13 de abril de 2020. Fuente: Artículo 20 Bis, Capítulo IV Bis de la Ley General de Acceso de las Mujeres a una Vida Libre de Violencia (última reforma DOF 16-12-2024)."
   },
   {
     "tipo": "Procedimiento",
-    "anio": "2024",
-    "titulo": "Procedimiento Especial Sancionador (PES)",
-    "desc": "Es un proceso de denuncia rápido y específico ante las autoridades electorales para investigar y sancionar conductas de violencia política de forma oportuna. Fuente: Código de Instituciones y Procedimientos Electorales de la CDMX."
+    "anio": "2020",
+    "titulo": "Procedimiento Especial Sancionador",
+    "desc": "Mecanismo expedito ante las autoridades electorales (INE e IECM) para investigar y sancionar conductas de violencia política de forma oportuna. Incluye etapas de queja, investigación, instrucción y resolución, con posibilidad de imponer medidas cautelares desde el inicio del procedimiento. Fuente: Ley General de Instituciones y Procedimientos Electorales y Código de Instituciones y Procedimientos Electorales de la Ciudad de México."
   },
   {
-    "tipo": "Juicio Ciudadano",
-    "anio": "2024",
-    "titulo": "Juicio para la Protección de los Derechos Político-Electorales (JDC)",
-    "desc": "Es el medio de impugnación con el que cuentan las mujeres para defender sus derechos de votar, ser votadas, asociarse libremente y ejercer las funciones del cargo para el que fueron electas cuando estos sean vulnerados por actos de violencia política."
+    "tipo": "Medio de Impugnación",
+    "anio": "2020",
+    "titulo": "Juicio para la Protección de los Derechos Político-Electorales del Ciudadano",
+    "desc": "Medio de impugnación ante el Tribunal Electoral del Poder Judicial de la Federación o el Tribunal Electoral de la Ciudad de México con el que las mujeres pueden defender su derecho a votar, ser votadas, asociarse y ejercer el cargo para el que fueron electas cuando sean vulnerados por actos de violencia política. Fuente: Ley General del Sistema de Medios de Impugnación en Materia Electoral, artículos 79 al 85."
   },
   {
     "tipo": "Mecanismo de Protección",
-    "anio": "2024",
-    "titulo": "Medidas precautorias",
-    "desc": "Prohibición de acercarse o comunicarse con la víctima, limitación para asistir o acercarse al domicilio de la víctima o al lugar donde se encuentre, protección policial de la victíma. Las medidas de protección previstas atenderán a la naturaleza y necesidades de cada caso en concreto."
+    "anio": "2020",
+    "titulo": "Medidas de Protección y Cautelares",
+    "desc": "Las autoridades electorales pueden ordenar de forma inmediata: prohibición al agresor de acercarse o comunicarse con la víctima, retiro de contenidos digitales que constituyan violencia política, protección policial, y suspensión provisional de los efectos del acto impugnado. Las medidas se determinan según la naturaleza y gravedad de cada caso. Fuente: Artículos 20 Bis y 27 al 34 de la Ley General de Acceso de las Mujeres a una Vida Libre de Violencia."
   },
   {
     "tipo": "Protocolo Institucional",
-    "anio": "2023",
-    "titulo": "Protocolo para la Atención de la Violencia Política contra las Mujeres en Razón de Género",
-    "desc": "Guía técnica especializada que establece las obligaciones de todas las autoridades del país para orientar, acompañar y proteger a las mujeres que denuncian agresiones en el ejercicio de sus funciones públicas."
+    "anio": "2022",
+    "titulo": "Protocolo del INE para la Atención de Víctimas de Violencia Política contra las Mujeres en Razón de Género",
+    "desc": "Aprobado por el Consejo General del Instituto Nacional Electoral en febrero de 2022 (Acuerdo INE/CG583/2022). Establece los ejes rectores de la atención de primer contacto, el análisis de riesgo y las obligaciones de todas las autoridades electorales para orientar, acompañar y proteger a las mujeres que denuncian violencia política."
+  },
+  {
+    "tipo": "Protocolo Institucional",
+    "anio": "2024",
+    "titulo": "Protocolo del IECM para la Atención de la Violencia Política de Género y Violencia Política contra las Mujeres en Razón de Género",
+    "desc": "Herramienta del Instituto Electoral de la Ciudad de México que incluye conceptos básicos, procedimientos institucionales y principios de atención no discriminatoria. Garantiza asesoramiento jurídico gratuito, confidencialidad y acceso a refugios seguros. Disponible en: iecm.mx/www/marconormativo/docs/Protocolo-IECM-VPGyVPMRG.pdf"
   },
   {
     "tipo": "Ley Local",
-    "anio": "2024",
-    "titulo": "Ley de Acceso de las Mujeres a una Vida Libre de Violencia de la CDMX",
-    "desc": "Marco jurídico estatal que define y sanciona las distintas modalidades de violencia de género en la capital, otorgando facultades específicas a las fiscalías locales y juzgados para intervenir en la protección de las ciudadanas."
+    "anio": "2020",
+    "titulo": "Ley de Acceso de las Mujeres a una Vida Libre de Violencia de la Ciudad de México",
+    "desc": "Marco jurídico local que define y sanciona las distintas modalidades de violencia de género en la capital, incluyendo la violencia política. Otorga facultades específicas a la Fiscalía General de Justicia de la Ciudad de México y a la Secretaría de las Mujeres para intervenir en la protección de las mujeres víctimas."
   },
   {
     "tipo": "Derecho de la Víctima",
-    "anio": "2026",
+    "anio": "2020",
     "titulo": "Asesoría Jurídica Gratuita y Especializada",
-    "desc": "Derecho a contar con una abogada o abogado defensor gratuito proporcionado por el Estado (como la Defensoría Pública Electoral), especializado en perspectiva de género, desde el momento en que se decide presentar la denuncia."
+    "desc": "Derecho a contar con representación legal gratuita proporcionada por el Estado a través de la Defensoría Pública Electoral o la Fiscalía General de Justicia, especializada en perspectiva de género, desde el momento de la denuncia y durante todo el procedimiento. Fuente: Artículo 20 Bis fracción IX de la Ley General de Acceso de las Mujeres a una Vida Libre de Violencia."
   },
   {
     "tipo": "Derecho de la Víctima",
-    "anio": "2026",
-    "titulo": "Protección contra la Revictimización (Dignidad)",
-    "desc": "Derecho a recibir un trato digno, empático y profesional por parte de las autoridades. Queda estrictamente prohibido que te culpen, duden de tu relato, te hagan preguntas invasivas sobre tu vida privada o te obliguen a carearte con el agresor."
+    "anio": "2020",
+    "titulo": "Protección contra la Revictimización",
+    "desc": "Las autoridades tienen prohibido emitir juicios de valor sobre la conducta de la víctima, cuestionarla sobre su vida privada o someterla a careos con el agresor. El trato debe ser digno, empático y con perspectiva de género en todo momento del procedimiento. Fuente: Artículos 20 Bis y Ley General de Víctimas, artículo 5, principio de no revictimización."
   },
   {
     "tipo": "Derecho de la Víctima",
-    "anio": "2026",
-    "titulo": "Derecho a la Intimidad y Resguardo de Identidad",
-    "desc": "Mecanismo legal para solicitar que tus datos personales, domicilio, teléfono y lugar de trabajo se mantengan bajo estricto secreto (información confidencial) en el expediente, evitando que el agresor o terceros tengan acceso a ellos."
+    "anio": "2020",
+    "titulo": "Confidencialidad y Resguardo de Datos Personales",
+    "desc": "La víctima puede solicitar que sus datos personales, domicilio, teléfono y lugar de trabajo se mantengan como información reservada en el expediente, impidiendo el acceso del agresor o de terceros. Fuente: Ley General de Víctimas, artículo 7 fracción XIX, y Ley Federal de Protección de Datos Personales en Posesión de los Particulares."
   },
   {
     "tipo": "Derecho de la Víctima",
-    "anio": "2026",
-    "titulo": "Derecho a contar con Intérprete o Traductor",
-    "desc": "Si la víctima pertenece a una comunidad o pueblo indígena, tiene derecho constitucional a ser asistida por personas intérpretes y defensoras que conozcan su lengua, cultura y variantes lingüísticas durante todo el procedimiento."
+    "anio": "2020",
+    "titulo": "Derecho a Intérprete o Traductor",
+    "desc": "Las mujeres pertenecientes a comunidades o pueblos indígenas tienen derecho constitucional a ser asistidas por intérpretes y defensoras que conozcan su lengua y cultura durante todo el procedimiento. Fuente: Artículo 2 de la Constitución Política de los Estados Unidos Mexicanos y artículo 10 de la Ley General de Derechos Lingüísticos de los Pueblos Indígenas."
+  },
+  {
+    "tipo": "Ley General",
+    "anio": "2020",
+    "titulo": "Reforma a la Constitución en Materia de Paridad",
+    "desc": "La reforma constitucional del 6 de junio de 2019, conocida como paridad en todo, establece que la paridad de género es un principio que debe aplicarse en todos los poderes del Estado y en todos los niveles de gobierno, siendo un mecanismo de prevención estructural de la violencia política. Fuente: Artículos 2, 35, 41, 52, 53, 56, 94 y 115 de la Constitución Política de los Estados Unidos Mexicanos."
   }
 ]
